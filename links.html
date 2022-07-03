@@ -12,7 +12,9 @@
 <body>
     <h2>Links</h2>
     <p>Links or anchor tags are ment to create connections to either the same site or other sites depending on the source attribute</p>
-    <textarea id="current"><a>This is a link</a></textarea>
+    <textarea id="current" oninput="current(); display()"><a>This is a link</a></textarea>
+    <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
+
 </body>
 <script src="./render.js"></script>
-<script type="text/javascript">current()</script>
+<script type="text/javascript">current(); display();</script>

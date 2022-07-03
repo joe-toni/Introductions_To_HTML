@@ -12,7 +12,9 @@
 <body>
     <h2>Headers</h2>
     <p>Headers are a collection of tags tipically used to create labels, titles, or other such pieces of text.</p>
-    <textarea id="current"><header>this</header></textarea>
+    <textarea id="current" oninput="current(); display()"><h1>This is a header</h1></textarea>
+    <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
+
 </body>
 <script src="./render.js"></script>
-<script type="text/javascript">current()</script>
+<script type="text/javascript">current(); display();</script>

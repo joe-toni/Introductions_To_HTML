@@ -20,9 +20,9 @@
         the previous portion of text while still being part of the same paragraph.
         <hr>
     </p>
-    <textarea id="current"><p>This is the paragraph example</p></textarea>
-    
+    <textarea id="current" oninput="current(); display()"><p>This is a paragraph</p></textarea>
+    <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>    
 </div>  
 </body>
 <script src="./render.js"></script>
-<script type="text/javascript">current()</script>
+<script type="text/javascript">current(); display();</script>

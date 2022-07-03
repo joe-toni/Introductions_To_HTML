@@ -14,8 +14,7 @@ var opening =
 <body>
 `;
 
-var content =
-``;
+var content =``;
 
 var ending = 
 `
@@ -23,10 +22,17 @@ var ending =
 </html>
 `
 
+var total = ``;
+
 function current() 
 {
     let content = document.getElementById("current").value;
-    let total = opening + content + ending;
+    total = opening + content + ending;
     console.log(total);
 }
 
+function display()
+{
+    let location = document.getElementById("location");
+    location.setAttribute("srcdoc", total);
+}
