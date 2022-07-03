@@ -23,11 +23,10 @@ var ending =
 </html>
 `
 
-function init() 
+function current() 
 {
     let content = document.getElementById("current").value;
     let total = opening + content + ending;
     console.log(total);
 }
 
-init();
