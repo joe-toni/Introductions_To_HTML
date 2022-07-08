@@ -1,0 +1,36 @@
+body
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+section
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2
+{
+    width: 70%;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+}
+
+textarea
+{
+    flex-basis: 50%;
+}
+
+iframe
+{
+    flex-basis: 50%;
+}

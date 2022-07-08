@@ -8,13 +8,17 @@
     <meta name="description" content="One of the files meant to contain the content for explaining a specific set of elements.">
     <meta name="keywords" content="HTML, testing, elements">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h2>Headers</h2>
-    <p>Headers are a collection of tags tipically used to create labels, titles, or other such pieces of text.</p>
-    <textarea id="current" oninput="current(); display()"><h1>This is a header</h1></textarea>
-    <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
-
+    <section>
+        <h2>Headers</h2>
+        <p>Headers are a collection of tags tipically used to create labels, titles, or other such pieces of text.</p>
+    </section>
+    <main>
+        <textarea id="current" oninput="current(); display()"><h1>This is a header</h1></textarea>
+        <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
+    </main>
 </body>
 <script src="../render.js"></script>
 <script type="text/javascript">current(); display();</script>

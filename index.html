@@ -10,43 +10,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body
-        {
-            background-color: whitesmoke;
-            width: 100%;
-            height: 100%;
-            margin: 0%;
-        }
+            {
+                background-color: whitesmoke;
+                width: 100%;
+                height: 100%;
+                margin: 0%;
+            }
         header
-        {
-            display: flex;
-            justify-content: flex-start;
-            background-color: #2a607c;
-            width: 100%;
-            margin: 0%;
-        }
+            {
+                display: flex;
+                justify-content: flex-start;
+                background-color: #2a607c;
+                width: 100%;
+                margin: 0%;
+            }
         h1
-        {
-            margin-left: 50px;
-            color: #ffff;
-        }
+            {
+                margin-left: 50px;
+                color: #ffff;
+            }
         ul
-        {
-            list-style: none;     
-        }
+            {
+                list-style: none; 
+                display: flex; 
+                flex-wrap: wrap;           
+            }
         li a 
-        {
-            text-decoration: none;
-            background-color: grey;
-            width: 150px;
-            height: 30px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;       
-        }
+            {
+                text-decoration: none;
+                background-color: grey;
+                width: 150px;
+                height: 30px;
+                border-radius: 15px 15px 0 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;       
+            }
         details summary > *
+            {
+                display: inline;
+
+
+            }
+        details summary
         {
-            display: inline;
+                background-color: antiquewhite;
+                width: 150px;
+                border: 2px solid black;
+                border-radius: 15px 15px 0 0;
+                border-bottom: 0px;
+                padding: 10px 20px;
+                
+        }
+
+        iframe
+        {
+            width: 99%;
+            height: 60vh;
+            border: 5px solid black;
         }
     </style>
 </head>
@@ -58,7 +79,7 @@
     <nav>
         <details open="open" >
            <summary><h2>Elements</h2></summary>
-            <ul style="list-style: none; display: flex; flex-wrap: wrap; justify-content: space-around;  ">
+            <ul>
                 <li><h3><a href="./components/headers.html" target="iframe_a">Headers</a></h3></li>
                 <li><h3><a href="./components/links.html" target="iframe_a">Links</a></h3></li>
                 <li><h3><a href="./components/paragraphs.html" target="iframe_a">Paragraphs</a></h3></li>
@@ -67,7 +88,7 @@
     </nav>
 
     <main>    
-        <iframe src="./components/introduction.html" name="iframe_a" title="Element Window" width="100%" height="300px"></iframe>
+        <iframe src="./components/introduction.html" name="iframe_a" title="Element Window"></iframe>
     </main>
         
     </body>
