@@ -8,27 +8,67 @@
     <meta name="description" content="A personal project meant for checking out some HTML components">
     <meta name="keywords" content="HTML, testing, elements">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body
+        {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 100%;
+            margin: 0%;
+        }
+        header
+        {
+            display: flex;
+            justify-content: flex-start;
+            background-color: #2a607c;
+            width: 100%;
+            margin: 0%;
+        }
+        h1
+        {
+            margin-left: 50px;
+            color: #ffff;
+        }
+        ul
+        {
+            list-style: none;     
+        }
+        li a 
+        {
+            text-decoration: none;
+            background-color: grey;
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;       
+        }
+        details summary > *
+        {
+            display: inline;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>HTML Playground</h1>
+    </header>
 
-<div id="rainbow-title-container" style="width:100%; border: 3px solid black; display: flex; flex-direction: column;" >
-    <h1 style="color:black; z-index:6">Welcome to the HTML Playground</h1>
-    <h1 style="color:tomato;z-index:5; margin-top: -56px; margin-left: 4px;">Welcome to the HTML Playground</h1>
-      <h1 style="color:orange;z-index:4; margin-top: -56px; margin-left: 9px;">Welcome to the HTML Playground</h1>
-    <h1 style="color:slateblue;z-index:3; margin-top: -56px; margin-left: 14px;">Welcome to the HTML Playground</h1>
-    <h1 style="color:violet;z-index:2; margin-top: -56px; margin-left: 19px;">Welcome to the HTML Playground</h1>
-    <h1 style="color:mediumseagreen;z-index:1; margin-top: -56px; margin-left: 24px;">Welcome to the HTML Playground</h1>
-</div>
+    <nav>
+        <details open="open" >
+           <summary><h2>Elements</h2></summary>
+            <ul style="list-style: none; display: flex; flex-wrap: wrap; justify-content: space-around;  ">
+                <li><h3><a href="./components/headers.html" target="iframe_a">Headers</a></h3></li>
+                <li><h3><a href="./components/links.html" target="iframe_a">Links</a></h3></li>
+                <li><h3><a href="./components/paragraphs.html" target="iframe_a">Paragraphs</a></h3></li>
+            </ul>
+        </details>
+    </nav>
 
-<details open="open" >
-    <summary>Elements</summary>
-        <details-options>
-            <a href="./components/headers.html" target="iframe_a">Headers</a><br/>
-            <a href="./components/links.html" target="iframe_a">Links</a><br/>
-            <a href="./components/paragraphs.html" target="iframe_a">Paragraphs</a><br/>
-        </details-options>
-</details>
-<iframe src="./components/introduction.html" name="iframe_a" title="Element Window" width="100%" height="300px"></iframe>
-
-</body>
+    <main>    
+        <iframe src="./components/introduction.html" name="iframe_a" title="Element Window" width="100%" height="300px"></iframe>
+    </main>
+        
+    </body>
 </html>
