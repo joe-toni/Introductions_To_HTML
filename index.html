@@ -74,45 +74,55 @@
 <body>
     <header>
         <h1 onclick="changeImg();">HTML Playground</h1>
+        <nav>
+            <h4> About the page</h4>
+            <h4> About the author</h4>
+            <h4>More to Explor</h4>
+        </nav>
     </header>
 
-    <nav>
+    <div>
         <details open="open" >
            <summary><h2>Elements</h2></summary>
-            <ul>
+            <menu>
                 <li><h3><a href="./components/headers.html" target="iframe_a">Headers</a></h3></li>
                 <li><h3><a href="./components/links.html" target="iframe_a">Links</a></h3></li>
                 <li><h3><a href="./components/paragraphs.html" target="iframe_a">Paragraphs</a></h3></li>
-            </ul>
+            </menu>
         </details>
-    </nav>
+    </div>
 
     <main>    
         <iframe src="./components/introduction.html" name="iframe_a" title="Element Window"></iframe>
     </main>
         
     </body>
-    <script type="text/javascript">
-                    
-    let first = "./assets/favicon _first_frame.ico";
-    let second = "./assets/favicon_second_frame.ico";
-    let img = document.getElementById("tab");
-    console.log(img.getAttribute("href"));
 
-    function changeImg()
-    {
-        if (img.getAttribute("href") == first)
-            {
-                img.setAttribute("href", second);
-            }
-        else
-            {
-                img.setAttribute("href", first);
-            }
-    }
+    <!--
+        This bit of javascript will animate the favicon on this index page by alternating 
+        the href attribute on the link in the header at an interval of every two seconds.
+    -->
+    <script type="text/javascript">         
+        let first = "./assets/favicon _first_frame.ico";
+        let second = "./assets/favicon_second_frame.ico";
+        let img = document.getElementById("tab");
+        console.log(img.getAttribute("href"));
 
-    window.setInterval(changeImg, 2000);
-
-
+        function changeImg()
+        {
+            if ( document.visibilityState =="hidden")
+                {
+                    return;
+                }
+             else if (img.getAttribute("href") == first)
+                {
+                    img.setAttribute("href", second);
+                }
+            else
+                {
+                    img.setAttribute("href", first);
+                }
+        }
+        window.setInterval(changeImg, 2000)
     </script>
 </html>
