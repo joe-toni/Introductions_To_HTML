@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <title>HTML Playground</title>
-    <link rel="icon" type="image/x-icon" href= "./assets/favicon.ico">
+    <link  id="tab" rel="icon" type="image/x-icon" href= "./assets/favicon _first_frame.ico">
     <meta charset="UTF-8">
     <meta name="author" content="Jose Faburrieta">
     <meta name="description" content="A personal project meant for checking out some HTML components">
@@ -73,7 +73,7 @@
 </head>
 <body>
     <header>
-        <h1>HTML Playground</h1>
+        <h1 onclick="changeImg();">HTML Playground</h1>
     </header>
 
     <nav>
@@ -92,4 +92,27 @@
     </main>
         
     </body>
+    <script type="text/javascript">
+                    
+    let first = "./assets/favicon _first_frame.ico";
+    let second = "./assets/favicon_second_frame.ico";
+    let img = document.getElementById("tab");
+    console.log(img.getAttribute("href"));
+
+    function changeImg()
+    {
+        if (img.getAttribute("href") == first)
+            {
+                img.setAttribute("href", second);
+            }
+        else
+            {
+                img.setAttribute("href", first);
+            }
+    }
+
+    window.setInterval(changeImg, 2000);
+
+
+    </script>
 </html>

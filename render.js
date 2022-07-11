@@ -28,7 +28,6 @@ function current()
 {
     let content = document.getElementById("current").value;
     total = opening + content + ending;
-    console.log(total);
 }
 
 function display()
