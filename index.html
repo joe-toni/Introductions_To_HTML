@@ -19,33 +19,59 @@
         header
             {
                 display: flex;
-                justify-content: flex-start;
-                background-color: #2a607c;
                 width: 100%;
+                height: 130px;
                 margin: 0%;
             }
-        h1
+            h1
             {
-                margin-left: 50px;
-                color: #ffff;
-            }
-        ul
-            {
-                list-style: none; 
-                display: flex; 
-                flex-wrap: wrap;           
-            }
-        li a 
-            {
-                text-decoration: none;
-                background-color: grey;
-                width: 150px;
-                height: 30px;
-                border-radius: 15px 15px 0 0;
                 display: flex;
                 justify-content: center;
-                align-items: center;       
+                align-items: center;
+                background-color: #2a607c;
+                border-bottom: 5px solid #2a607c;
+                flex-basis: 35%;
+                color: #ffff;
+                margin-top: 0px;
+                height: 100%;
             }
+            nav
+            {
+                align-items: center;
+                background-color: #ffff;
+                border-bottom: 5px solid #2a607c;
+                flex-basis: 65%;
+                display: flex;
+                justify-content: space-around;
+                height: 100%
+            }
+            
+            menu
+            {
+                margin: 0px;
+                padding: 0px;
+            }
+            menu li 
+            {
+                width: 150px;
+                list-style: none; 
+                display: flex;
+                justify-content: center;
+                align-items: center;           
+                border: 2px solid black;
+                border-top: 0px;
+                background-color: antiquewhite;           
+            }
+            menu li a, a:visited, a:link
+                {
+                    text-decoration: none;    
+                    color: black;
+                }
+        details
+        {
+        
+        }
+
         details summary > *
             {
                 display: inline;
@@ -57,17 +83,30 @@
                 background-color: antiquewhite;
                 width: 150px;
                 border: 2px solid black;
-                border-radius: 15px 15px 0 0;
-                border-bottom: 0px;
+                border-radius: 0px 0px 15px 0px;
                 padding: 10px 20px;
                 
         }
 
-        iframe
+        main
         {
-            width: 99%;
+            display: flex;
+            width: 100%;
             height: 60vh;
             border: 5px solid black;
+        }
+
+        iframe
+        {
+            z-index: -1;
+            margin-left: -200px;
+            border: 5px dashed black; 
+            width: 100%;
+            height: 100%;
+        }
+        .shared
+        {
+            margin-left: -40px;
         }
     </style>
 </head>
@@ -75,25 +114,24 @@
     <header>
         <h1 onclick="changeImg();">HTML Playground</h1>
         <nav>
-            <h4> About the page</h4>
-            <h4> About the author</h4>
-            <h4>More to Explor</h4>
+            <h2> About the page</h2>
+            <h2> About the author</h2>
+            <h2>More to Explore</h2>
         </nav>
     </header>
-
-    <div>
-        <details open="open" >
-           <summary><h2>Elements</h2></summary>
-            <menu>
+    
+    <main>    
+    <menu>
+        <details id="elements" open="open" >
+           <summary onclick="shareScreen()"><h2>Elements</h2></summary>
                 <li><h3><a href="./components/headers.html" target="iframe_a">Headers</a></h3></li>
                 <li><h3><a href="./components/links.html" target="iframe_a">Links</a></h3></li>
                 <li><h3><a href="./components/paragraphs.html" target="iframe_a">Paragraphs</a></h3></li>
-            </menu>
         </details>
-    </div>
+    </menu>
 
-    <main>    
-        <iframe src="./components/introduction.html" name="iframe_a" title="Element Window"></iframe>
+    
+        <iframe class="shared" id="frame" src="./components/introduction.html" name="iframe_a" title="Element Window"></iframe>
     </main>
         
     </body>
@@ -123,6 +161,18 @@
                     img.setAttribute("href", first);
                 }
         }
-        window.setInterval(changeImg, 2000)
+        window.setInterval(changeImg, 2000);
+
+        let menu = document.getElementById("elements");
+        let frame = document.getElementById("frame");
+
+        function shareScreen()
+        {
+            console.log(menu.open);
+            if (!menu.open)
+                {frame.classList.add("shared")}
+            else if (menu.open)
+                {frame.classList.remove("shared")}
+        }
     </script>
 </html>
