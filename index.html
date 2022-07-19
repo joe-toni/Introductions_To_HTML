@@ -8,133 +8,28 @@
     <meta name="description" content="A personal project meant for checking out some HTML components">
     <meta name="keywords" content="HTML, testing, elements">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body
-            {
-                background-color: whitesmoke;
-                width: 100%;
-                height: 100%;
-                margin: 0%;
-            }
-        header
-            {
-                display: flex;
-                width: 100%;
-                height: 130px;
-                margin: 0%;
-            }
-            h1
-            {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #2a607c;
-                border-bottom: 5px solid #2a607c;
-                flex-basis: 35%;
-                color: #ffff;
-                margin-top: 0px;
-                height: 100%;
-            }
-            nav
-            {
-                align-items: center;
-                background-color: #ffff;
-                border-bottom: 5px solid #2a607c;
-                flex-basis: 65%;
-                display: flex;
-                justify-content: space-around;
-                height: 100%
-            }
-            
-            menu
-            {
-                margin: 0px;
-                padding: 0px;
-            }
-            menu li 
-            {
-                width: 150px;
-                list-style: none; 
-                display: flex;
-                justify-content: center;
-                align-items: center;           
-                border: 2px solid black;
-                border-top: 0px;
-                background-color: antiquewhite;           
-            }
-            menu li a, a:visited, a:link
-                {
-                    text-decoration: none;    
-                    color: black;
-                }
-        details
-        {
-        
-        }
-
-        details summary > *
-            {
-                display: inline;
-
-
-            }
-        details summary
-        {
-                background-color: antiquewhite;
-                width: 150px;
-                border: 2px solid black;
-                border-radius: 0px 0px 15px 0px;
-                padding: 10px 20px;
-                
-        }
-
-        main
-        {
-            display: flex;
-            width: 100%;
-            height: 60vh;
-            border: 5px solid black;
-        }
-
-        iframe
-        {
-            z-index: -1;
-            margin-left: -200px;
-            border: 5px dashed black; 
-            width: 100%;
-            height: 100%;
-        }
-        .shared
-        {
-            margin-left: -40px;
-        }
-    </style>
+    <link rel="stylesheet" href="index_style.css">
 </head>
 <body>
     <header>
-        <h1 onclick="changeImg();">HTML Playground</h1>
+        <h1 onclick="changeContent();">HTML Playground</h1>
         <nav>
-            <h2> About the page</h2>
-            <h2> About the author</h2>
-            <h2>More to Explore</h2>
+            <details id="elements" open="open" >
+                <summary><h2>Menu</h2></summary>
+                <ul>
+                    <li><h3><a href="./groups/02_sectioning.html" target="iframe_a">Headers</a></h3></li>
+                    <li><h3><a href="./groups/03_text_elements.html" target="iframe_a">Links</a></h3></li>
+                    <li><h3><a href="./groups/04_embeded_content.html" target="iframe_a">Paragraphs</a></h3></li>
+                    <li><h3><a href="./groups/05_forms.html" target="iframe_a"></a></h3></li>
+                </ul>
+            </details>
         </nav>
     </header>
     
-    <main>    
-    <menu>
-        <details id="elements" open="open" >
-           <summary onclick="shareScreen()"><h2>Elements</h2></summary>
-                <li><h3><a href="./components/headers.html" target="iframe_a">Headers</a></h3></li>
-                <li><h3><a href="./components/links.html" target="iframe_a">Links</a></h3></li>
-                <li><h3><a href="./components/paragraphs.html" target="iframe_a">Paragraphs</a></h3></li>
-        </details>
-    </menu>
-
-    
-        <iframe class="shared" id="frame" src="./components/introduction.html" name="iframe_a" title="Element Window"></iframe>
+    <main>
+        <iframe class="shared" id="frame" src="./groups/01_introduction.html" name="iframe_a" title="Element Window"></iframe>
     </main>
-        
-    </body>
+</body>
 
     <!--
         This bit of javascript will animate the favicon on this index page by alternating 
@@ -146,7 +41,7 @@
         let img = document.getElementById("tab");
         console.log(img.getAttribute("href"));
 
-        function changeImg()
+        function changeContent()
         {
             if ( document.visibilityState =="hidden")
                 {
@@ -161,7 +56,7 @@
                     img.setAttribute("href", first);
                 }
         }
-        window.setInterval(changeImg, 2000);
+        window.setInterval(changeContent, 2000);
 
         let menu = document.getElementById("elements");
         let frame = document.getElementById("frame");
