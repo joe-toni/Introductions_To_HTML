@@ -1,3 +1,9 @@
+:root
+{
+    --current-blue: #2a607c;
+    --current-white: #ffffff;
+}
+
 html
 {
     height: 100%;
@@ -12,25 +18,28 @@ body
     margin: 0 auto;
     border: 5px solid black;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+
 }
 
 header
 {
     display: flex;
-    flex-basis: 100%;
+    width: 100%;
     height: 200px;
-    border: 2px solid blue;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: flex-end;
+    flex-flow: row wrap;
+    justify-content:   flex-end ;
+    gap: -1rem;
+    align-items: flex-start;
+
 }
 h1
 {
     margin: 0px;
-    width: 70%;
-    background-color: skyblue;
+    width: 85%;
+    background-color: var(--current-blue);
+    color: var(--current-white);
+    border-radius: 0 0 0 10px;     
     font-size: 50px;
     height: 150px;
     display: flex;
@@ -41,29 +50,51 @@ h1
 
 nav
 {
-    width: 70%;
-    border: 2px solid saddlebrown;
-}
-
-details *
-{
-    display: inline;
-    flex-wrap: nowrap;
+    width: 75%
 }
 
 details
 {
-    width: 100%;
-    display: flex;
+    width: 100px;
+    background-color: var(--current-white);
+    margin: -25px 0;
+    border-radius: 0px 0px 5px 5px;
+}
 
+details[open]
+{
+    width: 100%;
+    background-color: var(--current-white);
+    margin: -25px 0;
+    border-radius: 0px 0px 0px 5px;
+}
+
+details *
+{
+    margin: 0px;
+    display: inline;
 }
 
 details summary
 {
-    order: 2;
+    width: 20%;
+    padding: 5px 10px;
 }
 
-details ul
+details li
 {
-    order:1; 
+    width: 20%;
+    margin: auto 3%;
+}
+
+main
+{
+    width: 100%;
+    height: 100%;
+}
+
+iframe
+{
+    width: 100%;
+    height: 100%;
 }
