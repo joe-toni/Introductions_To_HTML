@@ -11,21 +11,73 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <header>
+        <a href="#intro"><h2>Sectioning</h2></a>
+        <nav>
+            <a href="#article" onclick="setSubject('article'); display();">Article</a>
+            <a href="#aside" onclick="setSubject('aside');display();">Aside</a>
+            <a href="#footer" onclick="setSubject('footer'); display();">Footer</a>
+            <a href="#header" onclick="setSubject('header'); display();">Header</a>
+            <a href="#main" onclick="setSubject('main'); display();">Main</a>
+            <a href="#nav" onclick="setSubject('nav'); display();">Nav</a>
+            <a href="#section" onclick="setSubject('section'); display();">Section</a>
+            <a href="#address" onclick="setSubject('address'); display();">Address</a>
+            <a href="#headers" onclick="setSubject('headers'); display();">Headers</a>
+        </nav>
+    </header>
+    
+<main>
+        <p id="intro" class="subject">As you might have read from the introduction HTML is an element driven language
+            and while this gives us a number of elements we can chose from to work with, where we place them how we organize them 
+            is realy important both for porper semantics and for referencing when looking for the items in a javascript file. Hence Sectioning
+            tags or tags that are specifically made to make the separation of portions with some more generic than others. With some of the more specifically
+            named ones usually reserved for commonly designated portions such as header, footer, or aside. In this area we will be going over some of these tags.
+        </p>
+        <p id="article" class="subject" data-content="<article>Independent article<article>">The article tag is one that specifies independent, self-contained content or content that makes sense on its own.
+            It does not have any unique renduring or special attributes.
+        </p>
+
+        <p id="aside" class="subject" data-content="<aside>set this aside<aside>">Aside is the used to lable a portion of content seperate from the main portion. It's typically placed as a sidebar, and similarly
+            to the article tag it has no special renduring but can be styled by name with CSS.
+        </p>
+
+        <p id="footer" class="subject" data-content="<footer>footers go at the bottom<footer>">The footer is similar to the footer of any normal document and is expected to contain information such as 
+            authorship information, copyright information, contact information, sitemap, and other related documents. The footer can be included several times in a 
+            document since it can be used for different portions some of which call for their own footers. 
+        </p>
+
+        <p id="header" class="subject" data-content="<article>Independent article<article>">Headers are used as containers for introductory content such as headings, logos, or navigation links. A document can  have multiple 
+            headers but should not be placed within footer, address, or other header tags.          
+        </p>
+
+        <p id="main" class="subject" data-content="<main>main content started<main>">A main tag is used to denote the main portion of a document and should be unique to a document and should avoid content that is 
+            repeated across other documents.
+        </p>
+
+        <p id="nav" class="subject" data-content="<nav>this is a navigation link <nav>">The nav tag indicates the navigation portion of the document, while it does not contain all links for a page it 
+            is expected to contain a collection of links to use for navigating the document, or to other related content.
+        </p>
+
+        <p id="section" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
+            as potions seperate from the other ones.
+        </p>
+
+        <p id="address" class="subject" data-content="<address>1515 made up ln<address>">Address defines a portion of the document dedicated to contact information about the author or owner of the 
+            document. The contact infomation in a Address tag can be an email address, URL, physical address, phone number, and other such things. The text within 
+            the Address tag will usually render in italic. It is not uncommon for an address tag to be used withing a footer. 
+        </p>
+
+        <p id="headers" class="subject" data-content="<h1>This is a header<h1>">Headers are actually a collection of tags used to create
+            headings for areas of our site with a few options that aside from controling size can also
+            serve the semantic purpose of labeling by order of improtance with h1 being both the 
+            biggest and the most important.
+        </p>
+
+</main>
     <section>
-        <h2 class="element_name">Headers</h2>
-        <figure>
-            <h1>These are headers</h1>
-            <h2>They range from h1 to h2</h2> 
-            <h3>And as you can see they go from biggest to smallest</h3>
-            <h4>The order in which they are uses helps indicate order of importance.</h4>
-        </figure>
-        
-        <p>Headers are a collection of tags tipically used to create labels, titles, or other such pieces of text.</p>
-    </section>
-    <main>
         <textarea id="current" oninput="current(); display()"><h1>This is a header</h1></textarea>
         <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
-    </main>
+        </section>
 </body>
 <script src="../render.js"></script>
 <script type="text/javascript">current(); display();</script>

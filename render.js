@@ -1,3 +1,5 @@
+let workarea = document.getElementById("current");
+
 var opening = 
 `
 <!DOCTYPE html>
@@ -23,6 +25,15 @@ var ending =
 `
 
 var total = ``;
+
+function setSubject(name)
+{
+    let subject = document.getElementById(name);
+    total =  opening + subject.dataset.content + ending;
+    workarea.value = subject.dataset.content;
+
+
+}
 
 function current() 
 {
