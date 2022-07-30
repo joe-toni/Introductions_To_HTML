@@ -15,13 +15,11 @@
         <a href="#intro"><h2>Text Elements</h2></a>
         <nav>
             <a href="#figcaption" onclick="setSubject('figcaption'); display();">Figcaption</a>
-            <a href="#div" onclick="setSubject('div');display();">Div</a>
             <a href="#blockquote" onclick="setSubject('blockquote'); display();">Blockquote</a>
             <a href="#dd" onclick="setSubject('dd'); display();">Dd</a>
-            <a href="#dir" onclick="setSubject('dir'); display();">Dir</a>
             <a href="#dl" onclick="setSubject('dl'); display();">Dl</a>
             <a href="#dt" onclick="setSubject('dt'); display();">Dt</a>
-            <a href="#figure" onclick="setSubject('figure'); display();">Figure</a>
+            <a href="#headers" onclick="setSubject('headers'); display();">Headers</a>
             <a href="#hr" onclick="setSubject('hr'); display();">Hr</a>
             <a href="#li" onclick="setSubject('li'); display();">Li</a>
             <a href="#ol" onclick="setSubject('ol'); display();">Ol</a>
@@ -34,61 +32,115 @@
     </header>
 
     <main>
-        <p id="figcaption" class="subject" data-content="<figure><img alt='somthing'></img><figcaption>random section<figure>">A &ltfigcaption&gt is a tag usually used within a figure parent along with an &ltimg&rt tag to 
+        <p id="figcaption" class="subject" data-content="
+        <figure>
+            <img alt='somthing'></img>
+            <figcaption>This is a faulty image at the moment</figcaption>
+        <figure>">A &ltfigcaption&gt is a tag usually used within a figure parent along with an &ltimg&gt tag to 
             indicate that the text contained is a caption for the preceding image. It has no special renduring but can be styled by name in css and is expected to either be the first or last child within 
-            the parent &ltfigure&rt tag.
+            the parent &ltfigure&gt tag.
         </p>
         
-        <p id="div" class="subject" data-content="<div>this is a div with nothing  but text in it<div>">The &ltdiv&rt tag is a generic container meant to be used in a multitude of ways depending on the aim of the author.
-            It has no special renduring unless specified through styling and can be the parent or child of most any other HTML element but is expected to be used only when no other semantic element is appropiate.
-        </p>
-
-        <p id="blockquote" class="subject" data-content="<blockquote><p>Someone said something once im sure of it.</p><cite>myself</cite><blockquote>">A &ltblockquote&gt is used to indicate that the text contained within is an extended quote. It is typically used 
-            along with a &ltcite&rt and &ltp&rt with the cite tag providing a source for the quote and a the paragraph tag actually containing the disired text. When rendured basically the blockquote tags
+        <p id="blockquote" class="subject" data-content="
+        <blockquote>
+            <p>Someone said something once im sure of it.</p>
+            <cite>myself</cite>
+        <blockquote>">A &ltblockquote&gt is used to indicate that the text contained within is an extended quote. It is typically used 
+            along with a &ltcite&gt and &ltp&gt with the cite tag providing a source for the quote and a the paragraph tag actually containing the disired text. When rendured basically the blockquote tags
             will add indentation to the paragraph in order to indicate a quotation but this can be adjusted through styling the margin.
         </p>
 
-        <p id="dd" class="subject" data-content="<ul><li>Item 1</li><dd>A list item with a description</dd><li>Item 2</li></ul>">The Description Details tag or &ltdd&gt is used within list elements to provide some extra description or definition to the corresponding
+        <p id="dd" class="subject" data-content="
+        <ul>
+            <li>Item 1</li>
+            <dd>A list item with a description</dd>
+            <li>Item 2</li>
+        </ul>">The Description Details tag or &ltdd&gt is used within list elements to provide some extra description or definition to the corresponding
             list item that precedded it. 
         </p>
 
-        <p id="dir" class="subject" data-content="<section>random section<section>">
+        <p id="dl" class="subject" data-content="
+        <dl>
+            <dt>Item 1</dt>
+            <dd>This is the first and only item in our list</dd>
+        </dl>">The &ltdl&gt tag is used to define a description list. It doesn't render much different that a regular list but is considered semantically correct when intending to 
+            create a list elment with discriptive content.
         </p>
 
-        <p id="dl" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="dt" class="subject" data-content="
+        <dl>
+            <dt>single description term 1</dt>
+            <dd>This is the first item in our list</dd>
+            <dt>shared description term 1</dt>
+            <dt>shared description term 2</dt>
+            <dd>These two terms share one description</dd>
+        </dl>">This element is called the description term or &ltdt&gt and is meant to be used within  a description list and is expected to be followed
+            by a description details &ltdd&gt unless multiple terms are to be defined by the same description. In this case multiple terms can be used in a row  but must still end in a description.
         </p>
 
-        <p id="dt" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="headers" class="subject" data-content="
+        <h1>This is the biggest most important  header<h1>
+        <h2>This is the second biggest header</h2>
+        <h3>This is also a header</h3>
+        <h4>So is this</h4>
+        <h5>And this</h5>
+        <h6>This is one as well</h6> ">Headers are actually a collection of tags used to create
+            headings for areas of our site with a few options that aside from controling size can also
+            serve the semantic purpose of labeling by order of improtance with h1 being both the 
+            biggest and the most important.
         </p>
 
-        <p id="figure" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="hr" class="subject" data-content="
+        <p>This paragraph has almost nothing to do with the one that follows<p>
+        <hr>
+        <p>This paragraph is separated</p>
+        ">The horizontal rule element does not itself contain text but is usually used between bodies of text or sections to better indicate a separtation of content.
         </p>
 
-        <p id="hr" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="li" class="subject" data-content="
+        <ol>
+            <li>Item 1 on an ordered list</li>
+        </ol>
+        <ul>
+            <li>Item 1 on an unrodered list</li>
+        </ul>">The &lsli&gt is known as the list item element and it is meant to be used in either ordered, unordered lists, or menus. It will render with bullet points if used in 
+        a menu or unordered list while renduring with accending numbers in an ordered list. Note that while it can technically be used in a description list it would be more 
+        correct for the author to specify a description term in such a case.
         </p>
 
-        <p id="li" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="ol" class="subject" data-content="
+        <ol>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+        </ol>">An ordered list elment or &ltol&gt is meant to be used for lists where the order of appearance is important hence the list items renduring with a numreical value
+        at the begining of each item.
         </p>
 
-        <p id="ol" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="p" class="subject" data-content="
+        <p>This is a very small paragraph for this example. But it definately is one none the less<p>">The paragraph tag or &ltp&gt is used to contain any grouping of related content although typically thought
+            of as meant to contain  blocks of text.
         </p>
 
-        <p id="p" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="pre" class="subject" data-content="
+        <p>This block of text will
+                look like a 
+                    normal paragraph.
+        </p>
+        <pre>This block of text will 
+                look a little
+                    funky off the bat</pre>"> &ltpre&gt or the preformated text element is similar to the paragraph tag focused on containing blocks of text, however while a p element will 
+                    ignore extra spaces a preformated element will render the text exactly as writen.   
         </p>
 
-        <p id="pre" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
-        </p>
-
-        <p id="ul" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
-            as potions seperate from the other ones.
+        <p id="ul" class="subject" data-content="
+        <ul>
+            <li>item 1 in an undordered list</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li> "> An unorderd list item or &ltul&gt is an elment similar to the &ltol&gt or the &ltdl&gt elements how ever this element is meant to be used on lists where
+            the order appearance is unimportant hence it renduring with bullet points as apposed to numerical values.
         </p>
 
         

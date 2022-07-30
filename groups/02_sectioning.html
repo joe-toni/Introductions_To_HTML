@@ -13,16 +13,17 @@
 <body>
     <header>
         <a href="#intro"><h2>Sectioning</h2></a>
-        <nav>
-            <a href="#article" onclick="setSubject('article'); display();">Article</a>
+        <nav>            
+            <a href="#address" onclick="setSubject('address'); display();">Address</a>
+            <a href="#article" onclick="setSubject('article'); display();">Article</a>            
             <a href="#aside" onclick="setSubject('aside');display();">Aside</a>
             <a href="#footer" onclick="setSubject('footer'); display();">Footer</a>
+            <a href="figure" onclick="setSubject('figure'); display();">Figure</a>
+            <a href="#div" onclick="setSubject('div'); display();">Div</a>
             <a href="#header" onclick="setSubject('header'); display();">Header</a>
             <a href="#main" onclick="setSubject('main'); display();">Main</a>
             <a href="#nav" onclick="setSubject('nav'); display();">Nav</a>
             <a href="#section" onclick="setSubject('section'); display();">Section</a>
-            <a href="#address" onclick="setSubject('address'); display();">Address</a>
-            <a href="#headers" onclick="setSubject('headers'); display();">Headers</a>
         </nav>
     </header>
     
@@ -46,6 +47,11 @@
             document since it can be used for different portions some of which call for their own footers. 
         </p>
 
+        <p id="div" class="subject" data-content="
+        <div>this is a div with nothing  but text in it<div>">The &ltdiv&gt tag is a generic container meant to be used in a multitude of ways depending on the aim of the author.
+            It has no special renduring unless specified through styling and can be the parent or child of most any other HTML element but is expected to be used only when no other semantic element is appropiate.
+        </p>
+
         <p id="header" class="subject" data-content="<article>Independent article<article>">Headers are used as containers for introductory content such as headings, logos, or navigation links. A document can  have multiple 
             headers but should not be placed within footer, address, or other header tags.          
         </p>
@@ -67,11 +73,7 @@
             the Address tag will usually render in italic. It is not uncommon for an address tag to be used withing a footer. 
         </p>
 
-        <p id="headers" class="subject" data-content="<h1>This is a header<h1>">Headers are actually a collection of tags used to create
-            headings for areas of our site with a few options that aside from controling size can also
-            serve the semantic purpose of labeling by order of improtance with h1 being both the 
-            biggest and the most important.
-        </p>
+
 
 </main>
     <section>
