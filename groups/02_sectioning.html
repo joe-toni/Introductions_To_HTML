@@ -14,27 +14,104 @@
     <header>
         <a href="#intro"><h2>Sectioning</h2></a>
         <nav>            
-            <a href="#address" onclick="setSubject('address'); display();">Address</a>
-            <a href="#article" onclick="setSubject('article'); display();">Article</a>            
-            <a href="#aside" onclick="setSubject('aside');display();">Aside</a>
-            <a href="#footer" onclick="setSubject('footer'); display();">Footer</a>
-            <a href="figure" onclick="setSubject('figure'); display();">Figure</a>
-            <a href="#div" onclick="setSubject('div'); display();">Div</a>
-            <a href="#header" onclick="setSubject('header'); display();">Header</a>
-            <a href="#main" onclick="setSubject('main'); display();">Main</a>
-            <a href="#nav" onclick="setSubject('nav'); display();">Nav</a>
-            <a href="#section" onclick="setSubject('section'); display();">Section</a>
+            <a href="#address">&ltaddress&gt</a>
+            <div class="vertical-line"></div>
+            <a href="#article">&ltarticle&gt</a>            
+            <div class="vertical-line"></div>
+            <a href="#aside">&ltaside&gt</a>
+            <div class="vertical-line"></div>
+            <a href="#footer" onclick="setSubject('footer'); display();">&ltfooter&gt</a>
+            <div class="vertical-line"></div>
+            <a href="figure" onclick="setSubject('figure'); display();">&ltfigure&gt</a>
+            <div class="vertical-line"></div>
+            <a href="#div" onclick="setSubject('div'); display();">&ltdiv&gt</a>
+            <div class="vertical-line"></div>
+            <a href="#header" onclick="setSubject('header'); display();">&ltheader&gt</a>
+            <div class="vertical-line"></div>
+            <a href="#main" onclick="setSubject('main'); display();">&ltmain&gt</a>
+            <div class="vertical-line"></div>
+            <a href="#nav" onclick="setSubject('nav'); display();">&ltnav&gt</a>
+            <div class="vertical-line"></div>
+            <a href="#section" onclick="setSubject('section'); display();">&ltsection&gt</a>
         </nav>
     </header>
     
 <main>
-        <p id="intro" class="subject">As you might have read from the introduction HTML is an element driven language
+        <section id="intro" class="subject">As you might have read from the introduction HTML is an element driven language
             and while this gives us a number of elements we can chose from to work with, where we place them how we organize them 
             is realy important both for porper semantics and for referencing when looking for the items in a javascript file. Hence Sectioning
             tags or tags that are specifically made to make the separation of portions with some more generic than others. With some of the more specifically
             named ones usually reserved for commonly designated portions such as header, footer, or aside. In this area we will be going over some of these tags.
+        </section>
+
+<!--Spacing for "address" section-->
+        <section id="address" class="subject" data-content="
+        <address>
+            Address: PO Box #1111,  NotReal NV<br>
+            Check out more at: <a href='#' onclick='return false;'>BrokenLink.com</a><br>
+            Call us at: 1(800)222-2222
+        <address>">
+            <h3>&ltaddress&gt: The "Address" element</h3>
+            <p>
+               The &ltaddress&gt elment is used for indicating that the content contained within is some sort of contact information.
+               The contact information provided can be actuall addresses email or otherwise, phone numbers, social media handles, and so on.
+               This elment can be included multiple times in a document if appropriate. Take for example an online magazine with more than one 
+               article in a page each with different authors, you could include and address element for each of the articles as needed. 
+               The text included within the elment will be italicized by default.
+            </p>
+            <div class="example-adjust">
+                <button onclick="setSubject('address'); display();">See Example</button>
+                <button>Clear</button>
+            </div>
+        </section>
+<!---->
+
+<!--Spacing for "article" section-->
+        <section id="article" class="subject" data-content="
+    <main>
+        <p> This is a sample paragraph</p>
+        <p> These two are the main portion of our document</p>
+    </main>
+    <article>
+        <p>This is an Independent portion of our document.</p>
+     </article>">
+            <h3>&ltarticle&gt: The "Article" element</h3>
+            <p>
+                The &ltarticle&gt elemet is used for sections that are meant to be resused in other works or can be used independently from the rest of the document.
+                Consider items such as seperate articles in a magazine, an individual post, or some interactive widget such as the one used in this site. 
+                It has no special renduring and can be styled by name in CSS.
+            </p>
+            <div class="example-adjust">
+                <button onclick="setSubject('article'); display();">See Example</button>
+                <button>Clear</button>
+            </div>
+        </section>
+<!---->
+
+<!--Spacing for  "aside" section-->
+    <section id="aside" class="subject" data-content="
+    <div style='display:flex;'>
+    <p>This is a portion of the example. It will be styled as the main focus.</p>
+    <aside>
+        <p>This is the side portion, It will be styled off to the side of the main portion.</p>
+    <aside>
+    </div>">
+        <h3>&ltaside&gt: The "Aside" element</h3>
+        <p>
+            The &ltaside&gt element is used for sections of a document that are in someway related to the main portion, 
+            but can be seperated for a better flow of content. Consider tips, notes, sidebars and other such examples. Slightly different
+            from an <a href="#article">article</a> element in that it is typically ment to remain connected to the main content. 
+            The element provides no special renduring but can by styled by name using CSS.
         </p>
-        <p id="article" class="subject" data-content="<article>Independent article<article>">The article tag is one that specifies independent, self-contained content or content that makes sense on its own.
+        <div class="example-adjust">
+            <button onclick="setSubject('aside'); display();">See Example</button>
+            <button>Clear</button>
+        </div>
+    </section>
+<!---->
+
+        <!--
+            <p id="article" class="subject" data-content="<article>Independent article<article>">The article tag is one that specifies independent, self-contained content or content that makes sense on its own.
             It does not have any unique renduring or special attributes.
         </p>
 
@@ -72,14 +149,16 @@
             document. The contact infomation in a Address tag can be an email address, URL, physical address, phone number, and other such things. The text within 
             the Address tag will usually render in italic. It is not uncommon for an address tag to be used withing a footer. 
         </p>
+    -->
+    </main>
 
-
-
-</main>
-    <section>
+    <article id="sample-space">
         <textarea id="current" oninput="current(); display()"><h1>This is a header</h1></textarea>
         <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
-        </section>
+    </article>
+
+
+
 </body>
 <script src="../render.js"></script>
 <script type="text/javascript">current(); display();</script>
