@@ -20,13 +20,13 @@
             <div class="vertical-line"></div>
             <a href="#aside">&ltaside&gt</a>
             <div class="vertical-line"></div>
-            <a href="#footer" onclick="setSubject('footer'); display();">&ltfooter&gt</a>
+            <a href="#footer">&ltfooter&gt</a>
             <div class="vertical-line"></div>
-            <a href="figure" onclick="setSubject('figure'); display();">&ltfigure&gt</a>
+            <a href="#figure">&ltfigure&gt</a>
             <div class="vertical-line"></div>
-            <a href="#div" onclick="setSubject('div'); display();">&ltdiv&gt</a>
+            <a href="#div">&ltdiv&gt</a>
             <div class="vertical-line"></div>
-            <a href="#header" onclick="setSubject('header'); display();">&ltheader&gt</a>
+            <a href="#header">&ltheader&gt</a>
             <div class="vertical-line"></div>
             <a href="#main" onclick="setSubject('main'); display();">&ltmain&gt</a>
             <div class="vertical-line"></div>
@@ -110,32 +110,127 @@
     </section>
 <!---->
 
-        <!--
-            <p id="article" class="subject" data-content="<article>Independent article<article>">The article tag is one that specifies independent, self-contained content or content that makes sense on its own.
-            It does not have any unique renduring or special attributes.
+<!--Spacing for "footer" section-->
+    <section id="footer" class="subject" data-content="
+    <article>
+        <h1>How to use a Footer</h1>
+        <p>
+            This is an example of how to include a footer. Consider this to be the main 
+            portion of the sample article.
         </p>
-
-        <p id="aside" class="subject" data-content="<aside>set this aside<aside>">Aside is the used to lable a portion of content seperate from the main portion. It's typically placed as a sidebar, and similarly
-            to the article tag it has no special renduring but can be styled by name with CSS.
-        </p>
-
-        <p id="footer" class="subject" data-content="<footer>footers go at the bottom<footer>">The footer is similar to the footer of any normal document and is expected to contain information such as 
-            authorship information, copyright information, contact information, sitemap, and other related documents. The footer can be included several times in a 
+         <footer>
+            author: JAFT
+        <footer>
+    </article>">
+        <h3>&ltfooter&gt: The "Footer" element</h3>
+        <p>
+            The footer is similar to the footer of any normal document and is expected to contain information such as 
+            authorship information, copyright information, contact information, sitemap, and other related documents. A footer element can be included several times in a 
             document since it can be used for different portions some of which call for their own footers. 
         </p>
+        <div class="example-adjust">
+            <button onclick="setSubject('footer'); display();">See Example</button>
+            <button>Clear</button>
+        </div>
+    </section>
+<!---->
 
-        <p id="div" class="subject" data-content="
-        <div>this is a div with nothing  but text in it<div>">The &ltdiv&gt tag is a generic container meant to be used in a multitude of ways depending on the aim of the author.
-            It has no special renduring unless specified through styling and can be the parent or child of most any other HTML element but is expected to be used only when no other semantic element is appropiate.
+<!--Spacing for "figure" section-->
+    <section id="figure" class="subject" data-content="
+    <figure>
+        <img src='brokenlink/not-there' alt='This image should not be fucntional'>
+        <figcaption>This is an example of a figure that will have an image and a figcaption</figcaption>
+    </figure>">
+        <h3>&ltfigure&gt: The "Figure" element</h3>
+        <p>
+            A figure element is used to house self-contained content, or content that is usually related to the rest of 
+            the document but can be viewed independently. Consider images, code snipets, diagrams and other such items, 
+            all should be viewable independently of the surrounding context. A figure has the optional <a>&ltfigcaption&gt</a> which
+            is meant to contain a brief description summerizing the contents of the figure.
         </p>
+        <div class="example-adjust">
+            <button onclick="setSubject('figure'); display();">See Example</button>
+            <button>Clear</button>
+        </div>
+    </section>
+<!---->
 
-        <p id="header" class="subject" data-content="<article>Independent article<article>">Headers are used as containers for introductory content such as headings, logos, or navigation links. A document can  have multiple 
-            headers but should not be placed within footer, address, or other header tags.          
-        </p>
+<!--Spacing for "div" section-->
+        <section id="div" class="subject" data-content="
+        <br>
+        <p>The following is a div with four smaller divs place inside it.</p>
+        <div style='display:flex; width:200px; height:200px; border:2px solid black; flex-wrap: wrap; padding:3px;'>
+            <div style='width:46%; border: 2px solid black; text-align:center; margin:2px;'><p>First</p></div>
+            <div style='width:46%; border: 2px solid black; text-align:center; margin:2px;'><p>Second</p></div>
+            <div style='width:46%; border: 2px solid black; text-align:center; margin:2px;'><p>Third</p></div>
+            <div style='width:46%; border: 2px solid black; text-align:center; margin:2px;'><p>Fourth</p></div>
+        <div>">
+            <h3>&ltdiv&gt: The "Div" element</h3>
+            <p>
+                A div is the most generic sectioning element available. It is meant to be used when no other semantic elments are applicable,
+                and is typically used to facilitate styling for its content.
+                
 
-        <p id="main" class="subject" data-content="<main>main content started<main>">A main tag is used to denote the main portion of a document and should be unique to a document and should avoid content that is 
-            repeated across other documents.
-        </p>
+            </p>
+            <div class="example-adjust">
+                <button onclick="setSubject('div'); display();">See Example</button>
+                <button>Clear</button>
+            </div>
+        </section>
+<!---->
+
+<!--Spacing for "header" section-->
+        <section id="header" class="subject" data-content="
+        <header style='border: 3px solid black; border-radius: 5px'>
+            <h2>Headers Sample Setup</h2>
+            <h3>A brief demonstration of  a simple header</h3>
+        </header>
+        <main>
+            <p>
+                The sample header here is used to contain a main title and a subtitle for our document
+            </p>
+        </main>">
+            <h3>&ltheader&gt: The "Header" element</h3>
+            <p>
+                The header element is used to represent introductory content and like the &ltfooter&gt element, 
+                it can be used multiple times in a docmument if appropriate. It will usually contain items such as a title,
+                navigation links, a search form, or anything relevant for leading into the follow up content.
+            </p>
+            <div class="example-adjust">
+                <button onclick="setSubject('header'); display();">See Example</button>
+                <button>Clear</button>
+            </div>
+        </section>
+<!---->
+
+<!--Spacing for "main" section-->
+        <section id="main" class="subject" data-content="
+        <header>
+            <h2>Title for the 'Main' Example</h2>
+        </header>
+        <section>
+            <p>This will be less important than the main portion</p>
+        </section>
+        <main>
+            <p>This is the focus of our sample document</p>
+        </main>">
+            <h3>&ltmain&gt: The "Main" element</h3>
+            <p>
+                The main element is used to encase the focus of  a document or the most important content. This does not neccisarily mean that the main
+                element will sturcturally be at the center of a document, it simply means that it's content is the dominant content.
+                A main element is supposed to be unique to a document which means it should avoid using content that is repeated across any others.
+            </p>
+            <div class="example-adjust">
+                <button onclick="setSubject('main'); display();">See Example</button>
+                <button>Clear</button>
+            </div>
+        </section>
+<!---->
+
+<!--
+
+
+
 
         <p id="nav" class="subject" data-content="<nav>this is a navigation link <nav>">The nav tag indicates the navigation portion of the document, while it does not contain all links for a page it 
             is expected to contain a collection of links to use for navigating the document, or to other related content.
@@ -143,11 +238,6 @@
 
         <p id="section" class="subject" data-content="<section>random section<section>">Section is used to mark portions of a document that do not need special labeling but can or should be thought of
             as potions seperate from the other ones.
-        </p>
-
-        <p id="address" class="subject" data-content="<address>1515 made up ln<address>">Address defines a portion of the document dedicated to contact information about the author or owner of the 
-            document. The contact infomation in a Address tag can be an email address, URL, physical address, phone number, and other such things. The text within 
-            the Address tag will usually render in italic. It is not uncommon for an address tag to be used withing a footer. 
         </p>
     -->
     </main>
