@@ -46,3 +46,10 @@ function display()
     let location = document.getElementById("location");
     location.setAttribute("srcdoc", total);
 }
+
+function clearSample()
+{
+    workarea.value = "";
+    total="";
+    display();
+}
