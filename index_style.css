@@ -82,7 +82,34 @@ main
 iframe
 {
     width: 100%;
-    height: 95%;
+    height: 50%;
     border: none;
     overflow: hidden;
 }
+
+.test-area
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+}
+
+article
+{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: 3px solid orange
+}
+
+article textarea
+{
+    width: 48%;
+}
+
+article iframe
+{
+    width: 48%
+}
+

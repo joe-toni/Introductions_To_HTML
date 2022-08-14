@@ -14,25 +14,25 @@
     <header>
         <a href="#intro"><h2>Sectioning</h2></a>
         <nav>            
-            <a href="#address">&ltaddress&gt</a>
+            <a href="#address" onclick="setSubject('address');">&ltaddress&gt</a>
             <div class="vertical-line"></div>
-            <a href="#article">&ltarticle&gt</a>            
+            <a href="#article" onclick="setSubject('article');">&ltarticle&gt</a>            
             <div class="vertical-line"></div>
-            <a href="#aside">&ltaside&gt</a>
+            <a href="#aside"  onclick="setSubject('aside');">&ltaside&gt</a>
             <div class="vertical-line"></div>
-            <a href="#footer">&ltfooter&gt</a>
+            <a href="#footer" onclick="setSubject('footer');">&ltfooter&gt</a>
             <div class="vertical-line"></div>
-            <a href="#figure">&ltfigure&gt</a>
+            <a href="#figure" onclick="setSubject('figure');">&ltfigure&gt</a>
+            <div class="vertical-line" ></div>
+            <a href="#div" onclick="setSubject('div');">&ltdiv&gt</a>
             <div class="vertical-line"></div>
-            <a href="#div">&ltdiv&gt</a>
+            <a href="#header" onclick="setSubject('header');">&ltheader&gt</a>
             <div class="vertical-line"></div>
-            <a href="#header">&ltheader&gt</a>
+            <a href="#main" onclick="setSubject('main');">&ltmain&gt</a>
             <div class="vertical-line"></div>
-            <a href="#main" onclick="setSubject('main'); display();">&ltmain&gt</a>
+            <a href="#nav" onclick="setSubject('nav');">&ltnav&gt</a>
             <div class="vertical-line"></div>
-            <a href="#nav" onclick="setSubject('nav'); display();">&ltnav&gt</a>
-            <div class="vertical-line"></div>
-            <a href="#section" onclick="setSubject('section'); display();">&ltsection&gt</a>
+            <a href="#section" onclick="setSubject('section');">&ltsection&gt</a>
         </nav>
     </header>
     
@@ -59,10 +59,6 @@
                article in a page each with different authors, you could include and address element for each of the articles as needed. 
                The text included within the elment will be italicized by default.
             </p>
-            <div class="example-adjust">
-                <button onclick="setSubject('address'); display();">See Example</button>
-                <button onclick="clearSample();">Clear</button>
-            </div>
         </section>
 <!---->
 
@@ -81,10 +77,6 @@
                 Consider items such as seperate articles in a magazine, an individual post, or some interactive widget such as the one used in this site. 
                 It has no special renduring and can be styled by name in CSS.
             </p>
-            <div class="example-adjust">
-                <button onclick="setSubject('article'); display();">See Example</button>
-                <button onclick="clearSample();">Clear</button>
-            </div>
         </section>
 <!---->
 
@@ -103,10 +95,6 @@
             from an <a href="#article">article</a> element in that it is typically ment to remain connected to the main content. 
             The element provides no special renduring but can by styled by name using CSS.
         </p>
-        <div class="example-adjust">
-            <button onclick="setSubject('aside'); display();">See Example</button>
-            <button onclick="clearSample();">Clear</button>
-        </div>
     </section>
 <!---->
 
@@ -128,10 +116,6 @@
             authorship information, copyright information, contact information, sitemap, and other related documents. A footer element can be included several times in a 
             document since it can be used for different portions some of which call for their own footers. 
         </p>
-        <div class="example-adjust">
-            <button onclick="setSubject('footer'); display();">See Example</button>
-            <button onclick="clearSample();">Clear</button>
-        </div>
     </section>
 <!---->
 
@@ -148,10 +132,6 @@
             all should be viewable independently of the surrounding context. A figure has the optional <a>&ltfigcaption&gt</a> which
             is meant to contain a brief description summerizing the contents of the figure.
         </p>
-        <div class="example-adjust">
-            <button onclick="setSubject('figure'); display();">See Example</button>
-            <button onclick="clearSample();">Clear</button>
-        </div>
     </section>
 <!---->
 
@@ -170,10 +150,6 @@
                 A div is the most generic sectioning element available. It is meant to be used when no other semantic elments are applicable,
                 and is typically used to facilitate styling for its content.
             </p>
-            <div class="example-adjust">
-                <button onclick="setSubject('div'); display();">See Example</button>
-                <button onclick="clearSample();">Clear</button>
-            </div>
         </section>
 <!---->
 
@@ -194,10 +170,6 @@
                 it can be used multiple times in a docmument if appropriate. It will usually contain items such as a title,
                 navigation links, a search form, or anything relevant for leading into the follow up content.
             </p>
-            <div class="example-adjust">
-                <button onclick="setSubject('header'); display();">See Example</button>
-                <button onclick="clearSample();">Clear</button>
-            </div>
         </section>
 <!---->
 
@@ -218,10 +190,6 @@
                 element will sturcturally be at the center of a document, it simply means that it's content is the dominant content.
                 A main element is supposed to be unique to a document which means it should avoid using content that is repeated across any others.
             </p>
-            <div class="example-adjust">
-                <button onclick="setSubject('main'); display();">See Example</button>
-                <button onclick="clearSample();">Clear</button>
-            </div>
         </section>
 <!---->
 
@@ -238,15 +206,13 @@
             as potions seperate from the other ones.
         </p>
     -->
-    </main>
+</main>
 
+    <!-- 
     <article id="sample-space">
         <textarea id="current" oninput="current(); display()"><h1>This is a header</h1></textarea>
         <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
     </article>
-
-
-
+-->
 </body>
 <script src="../render.js"></script>
-<script type="text/javascript">current(); display();</script>

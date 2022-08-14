@@ -10,9 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index_style.css">
 </head>
+
 <body>
     <header>
-       <h1 onclick="changeContent();">HTML Playground</h1>
+       <h1>HTML Playground</h1>
         <nav>
             <a href="./groups/01_introduction.html" target="iframe_a"><h3>Intro</h3></a>
             <a href="./groups/02_sectioning.html" target="iframe_a"><h3>Sectioning</h3></a>
@@ -24,7 +25,16 @@
     </header>
     
     <main>
-        <iframe class="shared" id="frame" src="./groups/01_introduction.html" name="iframe_a" title="Element Window" scrolling="no"></iframe>
+        <iframe class="shared" id="frame" src="./groups/02_sectioning.html" name="iframe_a" title="Element Window" scrolling="no"></iframe>
+        <div class="test-area">
+            <div class="example-adjust">
+                <button onclick="getSubject(); setDisplay();">See Example</button>
+                <button onclick="clearSample();">Clear</button>
+            </div>
+        <article id="sample-space">
+            <textarea id="workArea" oninput="current();"><h1>This is a header</h1></textarea>
+            <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="workDisplay"></iframe>
+        </article>
     </main>
 </body>
 
@@ -32,39 +42,44 @@
         This bit of javascript will animate the favicon on this index page by alternating 
         the href attribute on the link in the header at an interval of every two seconds.
     -->
-    <script type="text/javascript">         
-        let first = "./assets/favicon _first_frame.ico";
-        let second = "./assets/favicon_second_frame.ico";
-        let img = document.getElementById("tab");
-        console.log(img.getAttribute("href"));
+<script type="text/javascript">  
+    let workArea = document.getElementById("workArea"); 
+    let workDisplay = document.getElementById("workDisplay");
+    let current = '';
+    
+    let first = "./assets/favicon _first_frame.ico";
+    let second = "./assets/favicon_second_frame.ico";
+    
+    let img = document.getElementById("tab");
+    function changeIcon()
+    {
+        if ( document.visibilityState =="hidden")
+            {
+                return;
+            }
+         else if (img.getAttribute("href") == first)
+            {
+                img.setAttribute("href", second);
+            }
+        else
+            {
+                img.setAttribute("href", first);
+            }
+    }
+    window.setInterval(changeIcon, 2000);
+    
+    function getSubject()
+    {
+        current = localStorage.getItem('subject');
+        console.log(current);
+        workArea.value = current;
+    }
 
-        function changeContent()
-        {
-            if ( document.visibilityState =="hidden")
-                {
-                    return;
-                }
-             else if (img.getAttribute("href") == first)
-                {
-                    img.setAttribute("href", second);
-                }
-            else
-                {
-                    img.setAttribute("href", first);
-                }
-        }
-        window.setInterval(changeContent, 2000);
+    function setDisplay()
+    {
+        workDisplay.setAttribute("srcdoc", current);
+    }
 
-        let menu = document.getElementById("elements");
-        let frame = document.getElementById("frame");
-
-        function shareScreen()
-        {
-            console.log(menu.open);
-            if (!menu.open)
-                {frame.classList.add("shared")}
-            else if (menu.open)
-                {frame.classList.remove("shared")}
-        }
-    </script>
+</script>
+<script src="./script.js"></script>
 </html>
