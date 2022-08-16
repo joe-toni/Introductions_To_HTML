@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="index_style.css">
 </head>
 
-<body>
+<body >
     <header>
        <h1>HTML Playground</h1>
         <nav>
@@ -25,14 +25,14 @@
     </header>
     
     <main>
-        <iframe class="shared" id="frame" src="./groups/02_sectioning.html" name="iframe_a" title="Element Window" scrolling="no"></iframe>
+        <iframe class="shared" id="frame" src="./groups/02_sectioning.html#intro" name="iframe_a" title="Element Window" scrolling="no"></iframe>
         <div class="test-area">
             <div class="example-adjust">
                 <button onclick="getSubject(); setDisplay();">See Example</button>
                 <button onclick="clearSample();">Clear</button>
             </div>
         <article id="sample-space">
-            <textarea id="workArea" oninput="current();"><h1>This is a header</h1></textarea>
+            <textarea id="workArea" oninput="setCurrent(); setDisplay();"><h1>This is a header</h1></textarea>
             <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="workDisplay"></iframe>
         </article>
     </main>
@@ -78,6 +78,17 @@
     function setDisplay()
     {
         workDisplay.setAttribute("srcdoc", current);
+    }
+
+    function setCurrent()
+    {
+        current = workArea.value;
+    }
+
+    function clearSample()
+    {
+        workArea.value = '';
+        workDisplay.setAttribute("srcdoc", "");
     }
 
 </script>

@@ -112,19 +112,7 @@ main section
     padding: 150px 0px 650px 0px;
 }
 
-article
+#sample-space
 {
     display: flex;
-    width: 100%;
-    position:fixed;
-    bottom: 0;
-    right: 0; 
-}
-textarea
-{
-    width: 50%;
-}
-iframe
-{
-    width:50%;
 }
