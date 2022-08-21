@@ -8,7 +8,7 @@
     <meta name="description" content="A personal project meant for checking out some HTML components">
     <meta name="keywords" content="HTML, testing, elements">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="styletransition.css">
 </head>
 
 <body >
@@ -25,7 +25,7 @@
     </header>
     
     <main>
-        <iframe class="shared" id="frame" src="./groups/02_sectioning.html#intro" name="iframe_a" title="Element Window" scrolling="no"></iframe>
+        <iframe class="shared" id="frame" src="./groups/01_introduction.html#intro" name="iframe_a" title="Element Window" scrolling="no"></iframe>
         <div class="test-area">
             <div class="example-adjust">
                 <button onclick="getSubject(); setDisplay();">See Example</button>
@@ -43,6 +43,8 @@
         the href attribute on the link in the header at an interval of every two seconds.
     -->
 <script type="text/javascript">  
+
+
     let workArea = document.getElementById("workArea"); 
     let workDisplay = document.getElementById("workDisplay");
     let current = '';
@@ -92,5 +94,4 @@
     }
 
 </script>
-<script src="./script.js"></script>
 </html>

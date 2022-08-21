@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <title>HTML Playground-Introduction</title>
-    <link rel="icon" type="image/x-icon" href= "favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="author" content="Jose Faburrieta">
-    <meta name="description" content="The HTML file corresponding to the introduction portion of the main content to be displayed on startup">
-    <meta name="keywords" content="HTML, testing, elements">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-</head>
+<html lang="en-us" class="subpage">
+    <head>
+        <title>HTML Playground-Introduction</title>
+        <link rel="icon" type="image/x-icon" href= "favicon.ico">
+        <meta charset="UTF-8">
+        <meta name="author" content="Jose Faburrieta">
+        <meta name="description" content="The HTML file corresponding to the introduction portion of the main content to be displayed on startup">
+        <meta name="keywords" content="HTML, testing, elements">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styletransition.css">
+    </head>
 
-<body>
-    <header>
-        <h2>Introductions</h2>
-        <nav>
-            <a href="#intro">Introduction</a>
-            <a href="#about">About this site</a>
-        </nav>
-    </header>
-    <main>
-        <p id="intro" class="subject"> HTML is an element driven language, meaning that we build up our HTML by using sets of elements 
-            each of which is meant to have more or less a specific function. I mention more all of these elments are nested within each other and 
-            depending on how they are grouped, combined or used can affect how each one is used. but more about that later.
-        </p>
-        <p id="about"  class="subject">The point of this site is to develop a space where a new learner might be able to scan through some of these elements 
-            all while being able to test the actual code with real time renduring through the window provided below.
-        </p>
-    </main>
-</body>
+    <body>
+        <header>
+            <h2>Introduction</h2>
+        </header>
+    
+        <main>
+            <!--Spacing for "Introduction" section-->
+                    <section id="intro" class="subject" data-content="
+                    <pre>        
+                    ##      ## ######## ##        ######   #######  ##     ## ######## 
+                    ##  ##  ## ##       ##       ##    ## ##     ## ###   ### ##       
+                    ##  ##  ## ##       ##       ##       ##     ## #### #### ##       
+                    ##  ##  ## ######   ##       ##       ##     ## ## ### ## ######   
+                    ##  ##  ## ##       ##       ##       ##     ## ##     ## ##       
+                    ##  ##  ## ##       ##       ##    ## ##     ## ##     ## ##       
+                     ###  ###  ######## ########  ######   #######  ##     ## ########
+                    </pre> " > 
+                        <p> is an element driven language, meaning that we build up our HTML by using sets of elements 
+                            each of which is meant to have more or less a specific function. I mention more all of these elments are nested within each other and 
+                            depending on how they are grouped, combined or used can affect how each one is used. but more about that later.
+                        </p>
+                    </section>
+            <!---->
+        </main>
+    </body>
+<script src="../scripttransition.js"></script>
 </html>
