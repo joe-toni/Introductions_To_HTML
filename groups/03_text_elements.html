@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" class="subpage">
 <head>
-    <title>HTML Playground-Links</title>
+    <title>HTML Playground-Text-Elements</title>
     <link rel="icon" type="image/x-icon" href= "favicon.ico">
     <meta charset="UTF-8">
     <meta name="author" content="Jose Faburrieta">
-    <meta name="description" content="One of the files meant to contain the content for explaining a specific set of elements.">
+    <meta name="description" content="This document contains the information on HTML elements that focus on displaying text content.">
     <meta name="keywords" content="HTML, testing, elements">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styletransition.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
@@ -32,15 +32,30 @@
     </header>
 
     <main>
-        <p id="figcaption" class="subject" data-content="
+        <!--Spacing for "intro" section-->
+            <section id="intro" class="subject" data-content="
+            <pre>
+                 ######## ######## ##     ## ######## ######## ##       ######## ##     ## ######## ##    ## ########  ######  
+                    ##    ##        ##   ##     ##    ##       ##       ##       ###   ### ##       ###   ##    ##    ##    ## 
+                    ##    ##         ## ##      ##    ##       ##       ##       #### #### ##       ####  ##    ##    ##       
+                    ##    ######      ###       ##    ######   ##       ######   ## ### ## ######   ## ## ##    ##     ######  
+                    ##    ##         ## ##      ##    ##       ##       ##       ##     ## ##       ##  ####    ##          ## 
+                    ##    ##        ##   ##     ##    ##       ##       ##       ##     ## ##       ##   ###    ##    ##    ## 
+                    ##    ######## ##     ##    ##    ######## ######## ######## ##     ## ######## ##    ##    ##     ######  
+            </pre>">
+        </section>
+        <section id="figcaption" class="subject" data-content="
         <figure>
             <img alt='somthing'></img>
             <figcaption>This is a faulty image at the moment</figcaption>
-        <figure>">A &ltfigcaption&gt is a tag usually used within a figure parent along with an &ltimg&gt tag to 
+        <figure>">
+            <h3>&ltfigcaption&gt: </h3>
+            A &ltfigcaption&gt is a tag usually used within a figure parent along with an &ltimg&gt tag to 
             indicate that the text contained is a caption for the preceding image. It has no special renduring but can be styled by name in css and is expected to either be the first or last child within 
             the parent &ltfigure&gt tag.
         </p>
-        
+        </section>
+
         <p id="blockquote" class="subject" data-content="
         <blockquote>
             <p>Someone said something once im sure of it.</p>
@@ -151,5 +166,5 @@
         <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
     </section>
 </body>
-<script src="../render.js"></script>
+<script src="../script.js"></script>
 <script type="text/javascript">current(); display();</script>

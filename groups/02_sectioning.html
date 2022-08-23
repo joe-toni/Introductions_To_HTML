@@ -8,7 +8,7 @@
         <meta name="description" content="This document contains the information of HTML elements that serve to help organize content.">
         <meta name="keywords" content="HTML, testing, elements">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styletransition.css">
+        <link rel="stylesheet" href="../style.css">
     </head>
     <body>
         <header>
@@ -28,6 +28,7 @@
         </header>
 
         <main>
+            <!--Spacing for "intro" section-->
                 <section id="intro" class="subject" data-content="
                 <pre>
                     ######  ########  ######  ######## ####  #######  ##    ## #### ##    ##  ######   
@@ -40,13 +41,15 @@
                 </pre>
                 ">
                     <p>
-                        As you might have read from the introduction HTML is an element driven language
-                    and while this gives us a number of elements we can chose from to work with, where we place them how we organize them 
-                    is realy important both for porper semantics and for referencing when looking for the items in a javascript file. Hence Sectioning
-                    tags or tags that are specifically made to make the separation of portions with some more generic than others. With some of the more specifically
-                    named ones usually reserved for commonly designated portions such as header, footer, or aside. In this area we will be going over some of these tags.
+                        HTML is an element driven language that uses these elments to build structure and add functionality in a site.
+                        The elements in this group focus on providing more stucture than functionality. Some of these elements, such
+                        as main, aside, and header, are meant to group content in a manner that is semantically correct. They don't provide added 
+                        benenfits over other sectioning elements but are expected to follow certain guide lines for their content to aid in readability of 
+                        the document. Others such as section or div are a bit more generic and are more often used to facilitate unique styling or functionality
+                        of an area. How these elements are arranged and nested can greatly affect how the page reads and functions.
                     </p>
                 </section>
+        <!---->
 
         <!--Spacing for "address" section-->
                 <section id="address" class="subject"  data-content="
@@ -227,5 +230,5 @@
         <!---->
         </main>
     </body>
-<script src="../scripttransition.js"></script>
+<script src="../script.js"></script>
 </html>
