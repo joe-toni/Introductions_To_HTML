@@ -12,22 +12,24 @@
 </head>
 <body>
     <header>
-        <a href="#intro"><h2>Text Elements</h2></a>
+        <a href="#intro" onclick="setSubject('intro');"><h2>Text Elements</h2></a>
         <nav>
-            <a href="#figcaption" onclick="setSubject('figcaption'); display();">Figcaption</a>
-            <a href="#blockquote" onclick="setSubject('blockquote'); display();">Blockquote</a>
-            <a href="#dd" onclick="setSubject('dd'); display();">Dd</a>
-            <a href="#dl" onclick="setSubject('dl'); display();">Dl</a>
-            <a href="#dt" onclick="setSubject('dt'); display();">Dt</a>
-            <a href="#headers" onclick="setSubject('headers'); display();">Headers</a>
-            <a href="#hr" onclick="setSubject('hr'); display();">Hr</a>
-            <a href="#li" onclick="setSubject('li'); display();">Li</a>
-            <a href="#ol" onclick="setSubject('ol'); display();">Ol</a>
-            <a href="#p" onclick="setSubject('p'); display();">P</a>
-            <a href="#pre" onclick="setSubject('pre'); display();">Pre</a>
-            <a href="#ul" onclick="setSubject('ul'); display();">UL</a>
-
-
+            <div class="col">
+                <a href="#figcaption" onclick="setSubject('figcaption'); display();">&ltfigcaption&gt</a>
+                <a href="#blockquote" onclick="setSubject('blockquote'); display();">&ltblockquote&gt</a>
+                <a href="#dd" onclick="setSubject('dd'); display();">&ltdd&gt</a>
+                <a href="#dl" onclick="setSubject('dl'); display();">&ltdl&gt</a>
+                <a href="#dt" onclick="setSubject('dt'); display();">&ltdt&gt</a>
+                <a href="#headers" onclick="setSubject('headers'); display();">&ltheaders&gt</a>
+            </div>
+            <div class="col">
+                <a href="#hr" onclick="setSubject('hr'); display();">&lthr&gt</a>
+                <a href="#li" onclick="setSubject('li'); display();">&ltli&gt</a>
+                <a href="#ol" onclick="setSubject('ol'); display();">&ltol&gt</a>
+                <a href="#p" onclick="setSubject('p'); display();">&ltp&gt</a>
+                <a href="#pre" onclick="setSubject('pre'); display();">&ltpre&gt</a>
+                <a href="#ul" onclick="setSubject('ul'); display();">&ltul&gt</a>
+            </div>
         </nav>
     </header>
 
@@ -42,129 +44,211 @@
                     ##    ##         ## ##      ##    ##       ##       ##       ##     ## ##       ##  ####    ##          ## 
                     ##    ##        ##   ##     ##    ##       ##       ##       ##     ## ##       ##   ###    ##    ##    ## 
                     ##    ######## ##     ##    ##    ######## ######## ######## ##     ## ######## ##    ##    ##     ######  
-            </pre>">
+            </pre>
+            ">
+                <p>
+                    This section is will be focused on HTML elements that provide an area for text to be displayed in different manners.
+                    Some of these elements, such as the list items, will have very similar functionalities with the differences being mainly in 
+                    how the text is styled to begin with. Others such as the blockquote are more semantically correct for use in certain situations.
+                    ...
+                </p>
         </section>
-        <section id="figcaption" class="subject" data-content="
-        <figure>
-            <img alt='somthing'></img>
-            <figcaption>This is a faulty image at the moment</figcaption>
-        <figure>">
-            <h3>&ltfigcaption&gt: </h3>
-            A &ltfigcaption&gt is a tag usually used within a figure parent along with an &ltimg&gt tag to 
-            indicate that the text contained is a caption for the preceding image. It has no special renduring but can be styled by name in css and is expected to either be the first or last child within 
-            the parent &ltfigure&gt tag.
-        </p>
-        </section>
+        <!---->
 
-        <p id="blockquote" class="subject" data-content="
-        <blockquote>
-            <p>Someone said something once im sure of it.</p>
-            <cite>myself</cite>
-        <blockquote>">A &ltblockquote&gt is used to indicate that the text contained within is an extended quote. It is typically used 
-            along with a &ltcite&gt and &ltp&gt with the cite tag providing a source for the quote and a the paragraph tag actually containing the disired text. When rendured basically the blockquote tags
-            will add indentation to the paragraph in order to indicate a quotation but this can be adjusted through styling the margin.
-        </p>
+        <!--Spacing for "figcaption" section-->
+            <section id="figcaption" class="subject" data-content="
+            <figure>
+                <img alt='somthing'></img>
+                <figcaption>This is a faulty image at the moment</figcaption>
+            <figure>">
+                <h3>&ltfigcaption&gt: The "Figure Caption" element </h3>
+                <p>
+                    A &ltfigcaption&gt is a tag usually used within a figure parent along with an &ltimg&gt tag to 
+                    indicate that the text contained is a caption for the preceding image. It has no special renduring but can be styled by name in css and is expected to either be the first or last child within 
+                    the parent &ltfigure&gt tag.
+                </p>
+            </section>
+        <!---->
 
-        <p id="dd" class="subject" data-content="
-        <ul>
-            <li>Item 1</li>
-            <dd>A list item with a description</dd>
-            <li>Item 2</li>
-        </ul>">The Description Details tag or &ltdd&gt is used within list elements to provide some extra description or definition to the corresponding
-            list item that precedded it. 
-        </p>
+        <!--Spacing for "blockquote" section-->
+            <section id="blockquote" class="subject" data-content="
+            <blockquote>
+                <p>Someone said something once im sure of it.</p>
+                <cite>myself</cite>
+            <blockquote>
+                ">
+                    <h3>&ltblockqoute&gt: The "Blockqoute" Elements</h3>
+                    <p>
+                        A &ltblockquote&gt is used to indicate that the text contained within is an extended quote. It is typically used 
+                        along with a &ltcite&gt and &ltp&gt with the cite tag providing a source for the quote and a the paragraph tag actually containing the disired text. When rendured basically the blockquote tags
+                        will add indentation to the paragraph in order to indicate a quotation but this can be adjusted through styling the margin.
+                    </p>
+            </section>
+        <!---->
 
-        <p id="dl" class="subject" data-content="
-        <dl>
-            <dt>Item 1</dt>
-            <dd>This is the first and only item in our list</dd>
-        </dl>">The &ltdl&gt tag is used to define a description list. It doesn't render much different that a regular list but is considered semantically correct when intending to 
-            create a list elment with discriptive content.
-        </p>
+        <!--Spacing for "description details" section-->
+            <section id="dd" class="subject" data-content="
+            <ul>
+                <li>Item 1</li>
+                <dd>A list item with a description</dd>
+                <li>Item 2</li>
+            </ul>
+            ">
+                <h3>&ltdd&gt: The "Description Details" Element</h3>
+                <p>
+                    The Description Details tag or &ltdd&gt is used within list elements to provide some extra description or definition to the corresponding
+                    list item that precedded it. 
+                </p>
+            </section>
+        <!---->
 
-        <p id="dt" class="subject" data-content="
+        <!--Spacing for "description list" section-->
+            <section id="dl" class="subject" data-content="
+            <dl>
+                <dt>Item 1</dt>
+                <dd>This is the first and only item in our list</dd>
+            </dl>">
+                 <h3>&ltdl&gt: The "Description List" Element</h3>
+                 <p>
+                     The &ltdl&gt tag is used to define a description list. It doesn't render much different that a regular list but is considered semantically correct when intending to 
+                     create a list elment with discriptive content.
+                 </p>
+            </section>
+        <!---->
+
+        <!--Spacing for "description term" section-->
+        <section id="dt" class="subject" data-content="
         <dl>
             <dt>single description term 1</dt>
             <dd>This is the first item in our list</dd>
             <dt>shared description term 1</dt>
             <dt>shared description term 2</dt>
             <dd>These two terms share one description</dd>
-        </dl>">This element is called the description term or &ltdt&gt and is meant to be used within  a description list and is expected to be followed
-            by a description details &ltdd&gt unless multiple terms are to be defined by the same description. In this case multiple terms can be used in a row  but must still end in a description.
-        </p>
+        </dl>
+        ">
+            <h3>&ltdt&gt: The "Description List" element</h3>
+            <p>
+                This element is called the description term or &ltdt&gt and is meant to be used within  a description list and is expected to be followed
+                    by a description details &ltdd&gt unless multiple terms are to be defined by the same description. In this case multiple terms can be used in a row  but must still end in a description.
+            </p>
+        </section>
+        <!---->
 
-        <p id="headers" class="subject" data-content="
-        <h1>This is the biggest most important  header<h1>
-        <h2>This is the second biggest header</h2>
-        <h3>This is also a header</h3>
-        <h4>So is this</h4>
-        <h5>And this</h5>
-        <h6>This is one as well</h6> ">Headers are actually a collection of tags used to create
-            headings for areas of our site with a few options that aside from controling size can also
-            serve the semantic purpose of labeling by order of improtance with h1 being both the 
-            biggest and the most important.
-        </p>
+        <!--Spacing for "headers" section-->
+            <section id="headers" class="subject" data-content="
+            <h1>This is the biggest most important  header<h1>
+            <h2>This is the second biggest header</h2>
+            <h3>This is also a header</h3>
+            <h4>So is this</h4>
+            <h5>And this</h5>
+            <h6>This is one as well</h6> 
+            ">
+                <h3>&lth1&gt - &lth6&gt: The "Header" elements</h3>
+                <p>
+                    Headers are actually a collection of tags used to create
+                    headings for areas of our site with a few options that aside from controling size can also
+                    serve the semantic purpose of labeling by order of improtance with h1 being both the 
+                    biggest and the most important.
+                </p>
+            </section>
+        <!---->
 
-        <p id="hr" class="subject" data-content="
-        <p>This paragraph has almost nothing to do with the one that follows<p>
-        <hr>
-        <p>This paragraph is separated</p>
-        ">The horizontal rule element does not itself contain text but is usually used between bodies of text or sections to better indicate a separtation of content.
-        </p>
+        <!--Spacing for "horizontal rule" section-->
+            <section id="hr" class="subject" data-content="
+            <p>This paragraph has almost nothing to do with the one that follows<p>
+            <hr>
+            <p>This paragraph is separated</p>
+            ">
+                <h3>&lthr&gt: The "Horizontal Rule" element</h3>
+                <p>
+                    The horizontal rule element does not itself contain text but is usually used between bodies of text or sections to better indicate a separtation of content.
+                 </p>
+        <!---->
 
-        <p id="li" class="subject" data-content="
-        <ol>
-            <li>Item 1 on an ordered list</li>
-        </ol>
-        <ul>
-            <li>Item 1 on an unrodered list</li>
-        </ul>">The &lsli&gt is known as the list item element and it is meant to be used in either ordered, unordered lists, or menus. It will render with bullet points if used in 
-        a menu or unordered list while renduring with accending numbers in an ordered list. Note that while it can technically be used in a description list it would be more 
-        correct for the author to specify a description term in such a case.
-        </p>
+        <!--Spacing for "list item" section-->
+            <section id="li" class="subject" data-content="
+            <ol>
+                <li>Item 1 on an ordered list</li>
+            </ol>
+            <ul>
+                <li>Item 1 on an unrodered list</li>
+            </ul>
+            ">
+                <h3>&ltli&gt: The "List Item" element</h3>
+                <p>
+                    The &lsli&gt is known as the list item element and it is meant to be used in either ordered, unordered lists, or menus. It will render with bullet points if used in 
+                    a menu or unordered list while renduring with accending numbers in an ordered list. Note that while it can technically be used in a description list it would be more 
+                    correct for the author to specify a description term in such a case.
+                </p>
+            </section>
+        <!---->
 
-        <p id="ol" class="subject" data-content="
-        <ol>
-            <li>list item 1</li>
-            <li>list item 2</li>
-            <li>list item 3</li>
-            <li>list item 4</li>
-        </ol>">An ordered list elment or &ltol&gt is meant to be used for lists where the order of appearance is important hence the list items renduring with a numreical value
-        at the begining of each item.
-        </p>
+        <!--Spacing for "ordered list" section-->
+            <section id="ol" class="subject" data-content="
+            <ol>
+                <li>list item 1</li>
+                <li>list item 2</li>
+                <li>list item 3</li>
+                <li>list item 4</li>
+            </ol>
+            ">
+                <h3>&ltol&gt: The "Ordered List" element</h3>
+                <p>
+                An ordered list elment or &ltol&gt is meant to be used for lists where the order of appearance is important hence the list items renduring with a numreical value
+                at the begining of each item.
+                </p>
+            </section>
+        <!---->
 
-        <p id="p" class="subject" data-content="
-        <p>This is a very small paragraph for this example. But it definately is one none the less<p>">The paragraph tag or &ltp&gt is used to contain any grouping of related content although typically thought
-            of as meant to contain  blocks of text.
-        </p>
+        <!--Spacing for "paragraph" section-->
+            <section id="p" class="subject" data-content="
+            <p>This is a very small paragraph for this example. But it definately is one none the less<p>
+            ">
+                <h3>&ltp&gt: The "Paragraph" element</h3>
+                <p>
+                    The paragraph tag or &ltp&gt is used to contain any grouping of related content although typically thought
+                    of as meant to contain  blocks of text.
+                </p>
+            </section>
+        <!---->
 
-        <p id="pre" class="subject" data-content="
-        <p>This block of text will
-                look like a 
-                    normal paragraph.
-        </p>
-        <pre>This block of text will 
-                look a little
-                    funky off the bat</pre>"> &ltpre&gt or the preformated text element is similar to the paragraph tag focused on containing blocks of text, however while a p element will 
+        <!--Spacing for "preformatted" section-->
+            <section id="pre" class="subject" data-content="
+            <p>This block of text will
+                    look like a 
+                        normal paragraph.
+            </p>
+            <pre>This block of text will 
+                    look a little
+                        funky off the bat</pre>
+            ">
+                <h3>&ltpre&gt: The "Preformatted Text" element</h3>
+                <p>
+                    ltpre&gt or the preformated text element is similar to the paragraph tag focused on containing blocks of text, however while a p element will 
                     ignore extra spaces a preformated element will render the text exactly as writen.   
-        </p>
+                </p>
+            </section>
+        <!---->
 
-        <p id="ul" class="subject" data-content="
-        <ul>
-            <li>item 1 in an undordered list</li>
-            <li>item 2</li>
-            <li>item 3</li>
-            <li>item 4</li> "> An unorderd list item or &ltul&gt is an elment similar to the &ltol&gt or the &ltdl&gt elements how ever this element is meant to be used on lists where
-            the order appearance is unimportant hence it renduring with bullet points as apposed to numerical values.
-        </p>
+        <!--Spacing for "unordered list" element-->
+            <section id="ul" class="subject" data-content="
+            <ul>
+                <li>item 1 in an undordered list</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li> 
+            "> 
+                <h3>&ltul&gt: The "Unordered List" element</h3>
+                <p>
+                     An unorderd list item or &ltul&gt is an elment similar to the &ltol&gt or the &ltdl&gt elements how ever this element is meant to be used on lists where
+                     the order appearance is unimportant hence it renduring with bullet points as apposed to numerical values.
+                </p>
+            </section>
+        <!---->
 
 
     </main>
 
-    <section>
-        <textarea id="current" oninput="current(); display()"><a>This is a link</a></textarea>
-        <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>
-    </section>
 </body>
 <script src="../script.js"></script>
 <script type="text/javascript">current(); display();</script>

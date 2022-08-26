@@ -146,7 +146,7 @@ article iframe
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-start;
-    width: 95%;
+    width: 94%;
     height: 150px;
     border: 5px solid black;
     border-radius: 15px;
@@ -172,10 +172,18 @@ article iframe
 
 .subpage nav
 {
+    display: flex;
     width: 100%;
     height: auto;
     background-color: var(--current-white);
 
+}
+
+.subpage nav .col
+{
+    width: 100%;
+    flex:  1 1 100%;
+    display: flex;
 }
 
 .subpage nav div
@@ -220,11 +228,12 @@ article iframe
 
 .subpage main section
 {
+    border: solid 5px black;
     display: flex;
     flex-flow: column nowrap;
     align-self: center;
     width: 90%;
-    height: 250px;
+    height: 350px;
     padding-top: 150px;
     text-align: center;
 }
