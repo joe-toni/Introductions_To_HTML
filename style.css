@@ -38,6 +38,7 @@ header
 }
 h1
 {
+    display: flex;
     margin: 0px;
     width: 100%;
     background-color: var(--current-blue);
@@ -45,6 +46,8 @@ h1
     font-size: 50px;
     height: 150px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -55,31 +58,43 @@ nav
     margin-top: 0px;
     display: flex;
     flex-flow: row wrap;
+}
+
+nav .col
+{
+    height: 50px;
+    display: flex;
     justify-content: space-evenly;
+    flex: 1 1 100%
 }
 
 nav a, a:visited
 {
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    height: 50px;
     text-decoration: none;
-    color: black;
 }
 
-nav a:hover
+nav .col a:hover
 {
-    color: var(--current-blue);
+    background-color: var(--current-blue);
+    color: (var(--current-white));
 }
 
 main
 {
-    margin:  90px 0px 0px 0px;
+    margin:  65px 0px 0px 0px;
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
 iframe
 {
+    align-self: center;
     width: 100%;
-    height: 50%;
+    height: 400px;
     border: 1px dashed grey;
     overflow: hidden;
 }
@@ -142,12 +157,10 @@ article iframe
 .subpage header
 {
     position: fixed;
-    display: flex;
-    flex-flow: column nowrap;
     align-items: center;
-    justify-content: flex-start;
+    align-self: center;
     width: 94%;
-    height: 150px;
+    height: auto;
     border: 5px solid black;
     border-radius: 15px;
     overflow: hidden;
@@ -155,6 +168,7 @@ article iframe
 
 .subpage header h2
 {
+    align-self: top;
     display: flex;
     height: 50px;    
     width: 100%;
@@ -188,17 +202,19 @@ article iframe
 
 .subpage nav div
 {
-    flex-basis: 1px;
     border: 1px solid black;
 }
 
-.subpage nav a  
+.subpage nav a
 {
     height: 50px;
-    border-right: 3px solid black;
     border-bottom: 3px solid black;
     flex: 1 1 70px;
+}
 
+.subpage nav a:not(:last-child)
+{
+        border-right: 3px solid black;     
 }
 
 
@@ -228,13 +244,12 @@ article iframe
 
 .subpage main section
 {
-    border: solid 5px black;
     display: flex;
     flex-flow: column nowrap;
     align-self: center;
     width: 90%;
-    height: 350px;
-    padding-top: 150px;
+    min-height: 300px;
+    padding: 155px 0;
     text-align: center;
 }
 
