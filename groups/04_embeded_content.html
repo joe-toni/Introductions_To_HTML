@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>HTML Playground-Paragraphs</title>
+    <title>HTML Playground-Embeded-Content</title>
     <link rel="icon" type="image/x-icon" href= "favicon.ico">
     <meta charset="UTF-8">
     <meta name="author" content="Jose Faburrieta">
-    <meta name="description" content="One of the files meant to contain the content for explaining a specific set of elements.">
+    <meta name="description" content="This document contains the infromation for HTML elements used to attach content to a site.">
     <meta name="keywords" content="HTML, testing, elements">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<div id="section_1">
-    <h2>Paragraphs</h2>
-    <p>Paragraphs are the basic tag used fro displaying text through out the site this section will focus on how 
-        manipulating p tags along with line break and other tags fthat focus around structuring text with HTML.
-        <br>
-        <br>
-        For example this is a horizontal rule line that was preceeded by several line breaks to separate this sentence from
-        the <bdo dir="rtl" >previous portion of text while still being part of the</bdo> same paragraph.
-        <hr>
-    </p>
-    <textarea id="current" oninput="current(); display()"><p>This is a paragraph</p></textarea>
-    <iframe srcdoc="<p>placeholder<p>" name="iframe_a" title="Element Window" width="50%" height="250" id="location"></iframe>    
-</div>  
+    <header>
+        <a href="#intro" onclick="setSubject('intro');"><h2>Embeded Content</h2></a>
+        <nav>
+            <div class="col">
+                <a href="#audio" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#track" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#video" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#area" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#img" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#map" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#embed" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#source" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#iframe" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#object" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+o                <a href="#picture" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#BOOKMARK" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#BOOKMARK" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#BOOKMARK" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!--Spacing for "intro" section-->
+        <section id="intro" class="subject" data-content="
+        <pre>
+        ######## ##     ## ########  ######## ########  ######## ########           ######   #######  ##    ## ######## ######## ##    ## ######## 
+        ##       ###   ### ##     ## ##       ##     ## ##       ##     ##         ##    ## ##     ## ###   ##    ##    ##       ###   ##    ##    
+        ##       #### #### ##     ## ##       ##     ## ##       ##     ##         ##       ##     ## ####  ##    ##    ##       ####  ##    ##    
+        ######   ## ### ## ########  ######   ##     ## ######   ##     ##         ##       ##     ## ## ## ##    ##    ######   ## ## ##    ##    
+        ##       ##     ## ##     ## ##       ##     ## ##       ##     ##         ##       ##     ## ##  ####    ##    ##       ##  ####    ##    
+        ##       ##     ## ##     ## ##       ##     ## ##       ##     ##         ##    ## ##     ## ##   ###    ##    ##       ##   ###    ##    
+        ######## ##     ## ########  ######## ########  ######## ########  #######  ######   #######  ##    ##    ##    ######## ##    ##    ##  
+        </pre>
+        ">
+        <p>
+            Since sites are composed of more than just text, there must be some elements that allow us to bring in and display content of various kinds. This is where 
+            we use elments for embeding content such as images,links, videos, and even other sites. 
+        </p>
+    </section>
+    </main>
 </body>
-<script src="../render.js"></script>
-<script type="text/javascript">current(); display();</script>
+<script src="../script.js"></script>
