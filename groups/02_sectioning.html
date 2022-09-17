@@ -32,8 +32,13 @@
         </header>
 
         <main>
+            <div id="focus">
+
+            </div>            
+            
+            
             <!--Spacing for "intro" section-->
-                <section id="intro" class="subject" data-content="
+                <template  id="intro" data-content="
                 <pre>
                     ######  ########  ######  ######## ####  #######  ##    ## #### ##    ##  ######   
                     ##    ## ##       ##    ##    ##     ##  ##     ## ###   ##  ##  ###   ## ##    ##  
@@ -44,6 +49,7 @@
                      ######  ########  ######     ##    ####  #######  ##    ## #### ##    ##  ######   
                 </pre>
                 ">
+                <section class="subject">
                     <p>
                         HTML is an element driven language that uses these elments to build structure and add functionality in a site.
                         The elements in this group focus on providing more stucture than functionality. Some of these elements, such
@@ -53,28 +59,34 @@
                         of an area. How these elements are arranged and nested can greatly affect how the page reads and functions.
                     </p>
                 </section>
+                </template>
         <!---->
 
         <!--Spacing for "address" section-->
-                <section id="address" class="subject"  data-content="
-                <address>
-                    Address: PO Box #1111,  NotReal NV<br>
-                    Check out more at: <a href='#' onclick='return false;'>BrokenLink.com</a><br>
-                    Call us at: 1(800)222-2222
-                <address>">
-                    <h3>&ltaddress&gt: The "Address" element</h3>
-                    <p>
-                       The &ltaddress&gt elment is used for indicating that the content contained within is some sort of contact information.
-                       The contact information provided can be actuall addresses email or otherwise, phone numbers, social media handles, and so on.
-                       This elment can be included multiple times in a document if appropriate. Take for example an online magazine with more than one 
-                       article in a page each with different authors, you could include and address element for each of the articles as needed. 
-                       The text included within the elment will be italicized by default.
-                    </p>
-                </section>
+                <template id="address" data-content="
+                    <address>
+                        Address: PO Box #1111,  NotReal NV<br>
+                        Check out more at: <a href='#' onclick='return false;'>BrokenLink.com</a><br>
+                        Call us at: 1(800)222-2222
+                    <address>">
+                    <section class="subject" >
+                        <h3>&ltaddress&gt: The "Address" element</h3>
+                        <p>
+                           The &ltaddress&gt elment is used for indicating that the content contained within is some sort of contact information.
+                           The contact information provided can be actuall addresses email or otherwise, phone numbers, social media handles, and so on.
+                           This elment can be included multiple times in a document if appropriate. Take for example an online magazine with more than one 
+                           article in a page each with different authors, you could include and address element for each of the articles as needed. 
+                           The text included within the elment will be italicized by default.
+                        </p>
+                    </section>
+                </template>
         <!---->
 
+   
+
         <!--Spacing for "article" section-->
-                <section id="article" class="subject" data-content="
+
+            <template id="article"  data-content="
             <main>
                 <p> This is a sample paragraph</p>
                 <p> These two are the main portion of our document</p>
@@ -82,6 +94,7 @@
             <article>
                 <p>This is an Independent portion of our document.</p>
              </article>">
+             <section class="subject">
                     <h3>&ltarticle&gt: The "Article" element</h3>
                     <p>
                         The &ltarticle&gt elemet is used for sections that are meant to be resused in other works or can be used independently from the rest of the document.
@@ -89,16 +102,18 @@
                         It has no special renduring and can be styled by name in CSS.
                     </p>
                 </section>
+            </template>
         <!---->
 
         <!--Spacing for  "aside" section-->
-            <section id="aside" class="subject" data-content="
+            <template id="aside"  data-content="
             <div style='display:flex;'>
             <p>This is a portion of the example. It will be styled as the main focus.</p>
             <aside>
                 <p>This is the side portion, It will be styled off to the side of the main portion.</p>
             <aside>
             </div>">
+            <section class="subject">
                 <h3>&ltaside&gt: The "Aside" element</h3>
                 <p>
                     The &ltaside&gt element is used for sections of a document that are in someway related to the main portion, 
@@ -107,10 +122,11 @@
                     The element provides no special renduring but can by styled by name using CSS.
                 </p>
             </section>
+            </template>
         <!---->
 
         <!--Spacing for "footer" section-->
-            <section id="footer" class="subject" data-content="
+            <template id="footer" data-content="
             <article>
                 <h1>How to use a Footer</h1>
                 <p>
@@ -121,6 +137,7 @@
                     author: JAFT
                 <footer>
             </article>">
+            <section class="subject">
                 <h3>&ltfooter&gt: The "Footer" element</h3>
                 <p>
                     The footer is similar to the footer of any normal document and is expected to contain information such as 
@@ -128,14 +145,16 @@
                     document since it can be used for different portions some of which call for their own footers. 
                 </p>
             </section>
+            </template>
         <!---->
 
         <!--Spacing for "figure" section-->
-            <section id="figure" class="subject" data-content="
+            <template id="figure"  data-content="
             <figure>
                 <img src='brokenlink/not-there' alt='This image should not be fucntional'>
                 <figcaption>This is an example of a figure that will have an image and a figcaption</figcaption>
             </figure>">
+            <section class="subject">
                 <h3>&ltfigure&gt: The "Figure" element</h3>
                 <p>
                     A figure element is used to house self-contained content, or content that is usually related to the rest of 
@@ -144,10 +163,11 @@
                     is meant to contain a brief description summerizing the contents of the figure.
                 </p>
             </section>
+            </template>
         <!---->
 
         <!--Spacing for "div" section-->
-                <section id="div" class="subject" data-content="
+                <template id="div" data-content="
                 <br>
                 <p>The following is a div with four smaller divs place inside it.</p>
                 <div style='display:flex; width:200px; height:200px; border:2px solid black; flex-wrap: wrap; padding:3px;'>
@@ -156,16 +176,18 @@
                     <div style='width:46%; border: 2px solid black; text-align:center; margin:2px;'><p>Third</p></div>
                     <div style='width:46%; border: 2px solid black; text-align:center; margin:2px;'><p>Fourth</p></div>
                 <div>">
+                    <section class="subject" >
                     <h3>&ltdiv&gt: The "Div" element</h3>
                     <p>
                         A div is the most generic sectioning element available. It is meant to be used when no other semantic elments are applicable,
                         and is typically used to facilitate styling for its content.
                     </p>
                 </section>
+                </template>
         <!---->
 
         <!--Spacing for "header" section-->
-                <section id="header" class="subject" data-content="
+                <template id="header" data-content="
                 <header style='border: 3px solid black; border-radius: 5px'>
                     <h2>Headers Sample Setup</h2>
                     <h3>A brief demonstration of  a simple header</h3>
@@ -175,6 +197,7 @@
                         The sample header here is used to contain a main title and a subtitle for our document
                     </p>
                 </main>">
+                <section class="subject" >
                     <h3>&ltheader&gt: The "Header" element</h3>
                     <p>
                         The header element is used to represent introductory content and like the &ltfooter&gt element, 
@@ -182,10 +205,11 @@
                         navigation links, a search form, or anything relevant for leading into the follow up content.
                     </p>
                 </section>
+                </template>
         <!---->
 
         <!--Spacing for "main" section-->
-                <section id="main" class="subject" data-content="
+                <template id="main"  data-content="
                 <header>
                     <h2>Title for the 'Main' Example</h2>
                 </header>
@@ -195,6 +219,7 @@
                 <main>
                     <p>This is the focus of our sample document</p>
                 </main>">
+                <section class="subject" >
                     <h3>&ltmain&gt: The "Main" element</h3>
                     <p>
                         The main element is used to encase the focus of  a document or the most important content. This does not neccisarily mean that the main
@@ -202,10 +227,11 @@
                         A main element is supposed to be unique to a document which means it should avoid using content that is repeated across any others.
                     </p>
                 </section>
+                </template>
         <!---->
 
         <!--Spacing for  "nav" section-->
-                <section id="nav" class="subject" data-content="
+                <template id="nav" class="subject" data-content="
                 <header>
                     <h2>Example Header for the Navigation element</h2>
                     <nav>
@@ -219,24 +245,28 @@
                         and hidden with a substantial top margin.
                     </p>
                 </main>">
+                <section class="subject" >
                     <h3>&ltnav&gt: The "Nav" element</h3>
                     <p>
                         The nav tag indicates the navigation portion of the document, while it does not contain all links for a page it 
                         is expected to contain a collection of links to use for navigating the document, or to other related content.
                     </p>
                 </section>
+                </template>
         <!---->
 
         <!--Spacing for "section" section-->
-                <section id="section" class="subject" data-content="
+                <template id="section"  data-content="
                 <section>random section<section>
                     ">
+                    <section class="subject" >
                     <h3>&ltsection&gt: The "Section" element</h3>
                     <p>
                         Section is used to mark portions of a document that do not need special labeling but can or should be thought of
                         as potions seperate from the other ones.
                     </p>
                 </section>
+                </template>
         <!---->
         </main>
     </body>
