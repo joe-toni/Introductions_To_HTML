@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" class="subpage">
 <head>
     <title>HTML Playground-Embeded-Content</title>
     <link rel="icon" type="image/x-icon" href= "favicon.ico">
@@ -15,27 +15,24 @@
         <a href="#intro" onclick="setSubject('intro');"><h2>Embeded Content</h2></a>
         <nav>
             <div class="col">
-                <a href="#audio" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#track" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#video" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#area" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#img" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#map" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#embed" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#source" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#iframe" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#object" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#picture" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#BOOKMARK" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#BOOKMARK" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
-                <a href="#BOOKMARK" onclick="setSubject('SUBJECT');">&ltTITLE&gt</a>
+                <a href="#area" onclick="setSubject('SUBJECT');">&ltarea&gt</a>
+                <a href="#audio" onclick="setSubject('SUBJECT');">&ltaudio&gt</a>
+                <a href="#embed" onclick="setSubject('SUBJECT');">&ltembed&gt</a>
+                <a href="#iframe" onclick="setSubject('SUBJECT');">&ltiframe&gt</a>
+                <a href="#img" onclick="setSubject('SUBJECT');">&ltimg&gt</a>
+                <a href="#map" onclick="setSubject('SUBJECT');">&ltmap&gt</a>
+                <a href="#object" onclick="setSubject('SUBJECT');">&ltobject&gt</a>
+                <a href="#picture" onclick="setSubject('SUBJECT');">&ltpicture&gt</a>
+                <a href="#source" onclick="setSubject('SUBJECT');">&ltsource&gt</a>
+                <a href="#track" onclick="setSubject('SUBJECT');">&lttrack&gt</a>
+                <a href="#video" onclick="setSubject('SUBJECT');">&ltvideo&gt</a>
             </div>
         </nav>
     </header>
 
     <main>
         <!--Spacing for "intro" section-->
-        <section id="intro" class="subject" data-content="
+        <template id="intro"  data-content="
         <pre>
         ######## ##     ## ########  ######## ########  ######## ########           ######   #######  ##    ## ######## ######## ##    ## ######## 
         ##       ###   ### ##     ## ##       ##     ## ##       ##     ##         ##    ## ##     ## ###   ##    ##    ##       ###   ##    ##    
@@ -46,12 +43,32 @@
         ######## ##     ## ########  ######## ########  ######## ########  #######  ######   #######  ##    ##    ##    ######## ##    ##    ##  
         </pre>
         ">
+        <section class="subject">
         <p>
             Since sites are composed of more than just text, there must be some elements that allow us to bring in and display content of various kinds. This is where 
             we use elments for embeding content such as images,links, videos, and even other sites. 
         </p>
     </section>
-    <!--Spacing for ""-->
+    </template>
+    <!---->
+
+    <!--Spacing for "area" section-->
+    <template id="area" data-content="
+        To be established.
+    ">
+    <section class="subject">
+        <h3>&ltarea&gt: The "Image Map Area" element</h3>
+        <p>
+            An &ltarea&gt is a tag that is used within a <a href="">&ltmap&gt</a> element. It's used to define a clickable area within an image map.
+            The area element requires the "shape" and "coords" attribute to establish the space that will be clickable. These two elements are used in tandom with 
+            "shape" establishing the figure type and "coords" specifing the numerical values that will  define the area. "Shape" defined as either "rect", "circle", 
+            "poly". "Rect" sets up a quadrilateral figure that will take four numerical values or  two coordinates to determine the top left and bottom right corner of the figure.
+            "Circle" will require three numerical values or am x-position, y-position, and a radius. "Poly" will create a polygonal figure that can take as many values as needed, it will
+            pair the values given as x and y coordinates with the first and final set being the same to close the area. If they are noth the same then the browser will add
+             the last coodinate Playground-Sectioningto close the polygon.
+        </p>
+    </section>
+</template>
     </main>
 </body>
 <script src="../script.js"></script>
